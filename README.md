@@ -1,34 +1,212 @@
-# QuickBite
+# 🍔 QuickBite
 
-QuickBite is a React-based food discovery and ordering platform. Customers can discover nearby restaurants, browse menus, get meal suggestions, manage a cart, place orders, and update their profile. Restaurant partners can manage their restaurants, menus, orders, and settings, while administrators can manage users, restaurants, categories, and platform settings.
+### Discover. Decide. Order. — A Smarter Way to Find Your Next Meal.
 
-The application is built as a Vite single-page application and uses Firebase for authentication and application data. Geoapify powers location-based restaurant search and nearby restaurant discovery.
+QuickBite is a **location-aware, AI-assisted food discovery and ordering platform** built to make food selection faster, more personalized, and more convenient.
 
-## Features
+Instead of simply showing users a list of restaurants, QuickBite focuses on a more important question:
 
-### Customer experience
+> **"What should I eat right now?"**
 
-- Browse restaurants and food categories without signing in
-- Search and discover nearby restaurants using the current location
-- View restaurant details and menu items
-- Use the AI Suggest experience to get food and restaurant recommendations
-- Add items to a cart and complete checkout
-- View order history and manage personal profile information
+Users can discover nearby restaurants, explore menus, get personalized food suggestions through the **AI Suggest** experience, manage their cart, place orders, and manage their profiles.
 
-### Restaurant partner experience
+At the same time, QuickBite provides dedicated experiences for **customers, restaurant partners, and administrators**, creating a complete food-tech ecosystem within a single application.
 
-- Register and sign in as a restaurant partner
-- Add and manage restaurant information
-- Manage restaurant menu items and availability
-- View and manage incoming orders
-- Access restaurant profile and settings pages
+---
 
-### Administration
+## 🚀 Why QuickBite?
 
-- View the administrator dashboard
-- Manage users, restaurants, and food categories
-- Access platform settings
-- Protect administrative pages with role-based routing
+Traditional food ordering often requires users to:
+
+1. Search for restaurants
+2. Browse multiple menus
+3. Compare food items
+4. Decide what they are craving
+5. Finally place an order
+
+QuickBite focuses on reducing this decision-making effort.
+
+### 💡 The Core Idea
+
+QuickBite combines:
+
+**📍 Location Awareness**  
++  
+**🤖 Personalized Food Suggestions**  
++  
+**🍽️ Restaurant Discovery**  
++  
+**🛒 Seamless Ordering**  
++  
+**👥 Role-Based Platform Architecture**
+
+into one unified experience.
+
+> **Less searching. Less decision fatigue. Faster food discovery.**
+
+---
+
+# ✨ Features
+
+## 👤 Customer Experience
+
+### 📍 Nearby Restaurant Discovery
+
+Discover restaurants based on the user's current location using **Geoapify APIs**.
+
+- Location-based restaurant search
+- Nearby restaurant discovery
+- Browser location integration
+- Restaurant and food exploration
+
+### 🤖 AI Suggest — Personalized Food Discovery
+
+One of QuickBite's core differentiators is the **AI Suggest** experience.
+
+Instead of forcing users to manually search through multiple restaurants, QuickBite guides them through preference-based questions such as:
+
+- What's your vibe today?
+- Veg or non-veg?
+- Healthy, spicy, sweet, or surprise?
+- What's your spending mood?
+- When do you want your meal?
+
+These preferences are used to provide more relevant food and restaurant suggestions.
+
+### Example
+
+> **"I'm hungry, want something spicy, non-veg, and under ₹500."**
+
+Instead of manually exploring multiple restaurants, QuickBite uses these preferences as the starting point for food discovery.
+
+---
+
+### 🍽️ Restaurant & Menu Discovery
+
+Users can:
+
+- Browse restaurants
+- Explore restaurant details
+- View menus
+- Explore food categories
+- Check available menu items
+- Select items for ordering
+
+---
+
+### 🛒 Cart & Checkout
+
+Customers can:
+
+- Add food items to their cart
+- Modify cart selections
+- Review their order
+- Proceed through checkout
+- Place orders
+
+---
+
+### 📦 Order History
+
+Customers can access their previous orders and manage their ordering activity from their account.
+
+---
+
+### 👤 Profile Management
+
+Users can manage their personal profile information through a dedicated customer profile experience.
+
+---
+
+# 🏪 Restaurant Partner Experience
+
+QuickBite is not only designed for customers.
+
+Restaurant partners receive a dedicated platform experience to manage their business.
+
+### 🏪 Restaurant Management
+
+Partners can:
+
+- Add restaurant information
+- Manage restaurant profiles
+- Update restaurant details
+- Access restaurant settings
+
+### 🍴 Menu Management
+
+Partners can:
+
+- Add menu items
+- Update menu items
+- Manage item availability
+- Maintain their restaurant menu
+
+### 📦 Order Management
+
+Restaurant partners can:
+
+- View incoming orders
+- Manage restaurant orders
+- Access order-related workflows
+
+This creates a complete restaurant-side operational experience within the same application.
+
+---
+
+# 🛡️ Administration
+
+QuickBite includes a dedicated administrator experience for managing the overall platform.
+
+Administrators can:
+
+- 📊 Access the admin dashboard
+- 👥 Manage users
+- 🏪 Manage restaurants
+- 🍔 Manage food categories
+- ⚙️ Manage platform settings
+
+Administrative routes are protected using **role-based access control**.
+
+---
+
+# 🔐 Role-Based Architecture
+
+QuickBite uses a role-aware architecture to separate experiences between different types of users.
+
+### Supported Roles
+
+| Role | Access |
+|------|--------|
+| 👤 `customer` | Food discovery, AI suggestions, cart, checkout, orders, profile |
+| 🏪 `partner` | Restaurant management, menu management, orders, settings |
+| 🛡️ `admin` | Platform administration, users, restaurants, categories, settings |
+
+After authentication, QuickBite retrieves the user's profile from Firestore and determines the appropriate application experience based on the user's `role`.
+
+### Why this matters
+
+Instead of exposing every page to every user, QuickBite provides:
+
+- Role-specific navigation
+- Role-specific layouts
+- Protected routes
+- Separated workflows
+- Better scalability
+- Better maintainability
+
+---
+
+# 🧠 What Makes QuickBite Different?
+
+QuickBite is built around a simple observation:
+
+> **People don't always know what they want to eat — they know how they feel.**
+
+Traditional restaurant search starts with:
+
+```text
+Restaurant → Menu → Food → Decision
 
 ## Technology Stack
 
