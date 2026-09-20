@@ -120,7 +120,7 @@ Install the following before running the project:
 Clone the repository, move into the project directory, and install dependencies:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Shreya567567/QuickBite-AI-based-food-ordering-
 cd quickbite
 npm install
 ```
