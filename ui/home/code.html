@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../style.css"/>
+<style>
+        .glass {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .ai-pulse {
+            animation: pulse-glow 3s infinite ease-in-out;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 15px rgba(94, 106, 210, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(94, 106, 210, 0.6); }
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary/20">
+<!-- Top Navigation Bar -->
+<header class="bg-surface/80 dark:bg-surface-container-highest/80 backdrop-blur-xl border-b border-border-subtle dark:border-outline-variant shadow-sm docked full-width top-0 sticky z-[60]">
+<div class="flex justify-between items-center w-full px-container-max mx-auto h-16 px-4 md:px-6">
+<div class="flex items-center gap-4">
+<span class="font-display-lg text-display-lg-mobile font-black text-primary tracking-tighter">QuickBite</span>
+<div class="hidden md:flex items-center gap-1 bg-surface-container-low px-3 py-1.5 rounded-full border border-border-subtle cursor-pointer hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Patna, Bihar</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md hover:text-primary transition-colors duration-200" href="#">Explore</a>
+<a class="text-on-surface-variant font-medium font-body-md text-body-md hover:text-primary transition-colors duration-200" href="#">AI Suggest</a>
+<a class="text-on-surface-variant font-medium font-body-md text-body-md hover:text-primary transition-colors duration-200" href="#">Orders</a>
+<a class="text-on-surface-variant font-medium font-body-md text-body-md hover:text-primary transition-colors duration-200" href="#">Profile</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-surface-container-high rounded-full transition-all">notifications</button>
+<div class="h-10 w-10 rounded-full overflow-hidden border-2 border-primary-fixed-dim ring-2 ring-transparent active:ring-primary transition-all">
+<img alt="User profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6pA4h1U0ejs1JSw2x71_dSaukLeBB19hpPLYSBltLEIhnyP0Y672LoPJwW4To7HmiPmGg1mYMGk_uklFbtnbvcoT7N2o0bbSgPGtftkSAIhtG_BdlB247tHxllDtlXzQuLoTGHmX8MSy0HklG8u2LGhrIiePsx1rg0Bp0uGnaWK9M7kWGO-VvL86quJ7TDpINUuEl0R9CU2Tm4H1NLFEpert6OTFMgrWG9X8GzxP24bDqo14B8p8JFp-1nN_kqXnRXHxeBWObNg"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto pb-24 md:pb-12">
+<!-- Search Section -->
+<section class="px-4 mt-6 md:mt-10">
+<div class="relative max-w-2xl mx-auto group">
+<div class="absolute inset-y-0 left-5 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant group-focus-within:text-primary transition-colors">search</span>
+</div>
+<input class="w-full h-14 pl-14 pr-14 bg-surface-container-low border-none rounded-3xl text-body-lg focus:ring-2 focus:ring-primary/20 shadow-sm group-hover:shadow-md transition-all" placeholder="Search food, restaurants, or ask AI..." type="text"/>
+<div class="absolute inset-y-0 right-5 flex items-center">
+<span class="material-symbols-outlined text-ai-glow animate-pulse">auto_awesome</span>
+</div>
+</div>
+</section>
+<!-- Categories Pill Bar -->
+<section class="mt-8">
+<div class="flex gap-3 overflow-x-auto hide-scrollbar px-4 scroll-smooth">
+<button class="flex-shrink-0 bg-primary-container text-on-primary font-semibold px-6 py-2.5 rounded-full border border-primary/20 shadow-sm whitespace-nowrap">All</button>
+<button class="flex-shrink-0 bg-white text-on-surface-variant px-6 py-2.5 rounded-full border border-border-subtle hover:border-primary/40 hover:text-primary transition-all whitespace-nowrap">Pizza</button>
+<button class="flex-shrink-0 bg-white text-on-surface-variant px-6 py-2.5 rounded-full border border-border-subtle hover:border-primary/40 hover:text-primary transition-all whitespace-nowrap">Biryani</button>
+<button class="flex-shrink-0 bg-white text-on-surface-variant px-6 py-2.5 rounded-full border border-border-subtle hover:border-primary/40 hover:text-primary transition-all whitespace-nowrap">Burger</button>
+<button class="flex-shrink-0 bg-white text-on-surface-variant px-6 py-2.5 rounded-full border border-border-subtle hover:border-primary/40 hover:text-primary transition-all whitespace-nowrap">Rolls</button>
+<button class="flex-shrink-0 bg-white text-on-surface-variant px-6 py-2.5 rounded-full border border-border-subtle hover:border-primary/40 hover:text-primary transition-all whitespace-nowrap">Momos</button>
+<button class="flex-shrink-0 bg-white text-on-surface-variant px-6 py-2.5 rounded-full border border-border-subtle hover:border-primary/40 hover:text-primary transition-all whitespace-nowrap">Chinese</button>
+</div>
+</section>
+<!-- Hero Banners - Asymmetric Bento -->
+<section class="mt-8 px-4 grid grid-cols-1 md:grid-cols-12 gap-4 h-auto md:h-[320px]">
+<div class="md:col-span-8 relative rounded-3xl overflow-hidden group cursor-pointer h-[200px] md:h-full">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A top-down view of a gourmet wood-fired pizza with fresh basil and mozzarella sitting on a dark rustic table. The lighting is cinematic and warm, emphasizing the steam and textures of the crust. The scene is clean and high-end, reflecting a premium food brand's minimalist aesthetic with rich orange and deep charcoal tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABk4Hn1_irEI-ApZmSd9_gD1oi3z0x5YfkIZEkDmrZdlqSLAOwxDMzPB0KPqsCcHf274FclsbHSkMtBbWvAReoNXmg2CE-jwQbtKpCma0TDxac3bdpMoP88P7uAxrcKy5BRUIHpFhVdpVI3m6F67XZatqIH6TBMeG5ZyIGPxcJDnAmjc1GKgMssqHJbuf4ZBUf3tF05GXv-xOaF2C2kKeWMDuBfYUgegBQH7gA0TnvIedo043Y43mTeD3v8i1cQ3wI_kFVEFyDvg"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex flex-col justify-end p-8">
+<span class="text-tertiary-fixed font-mono-ui text-mono-ui uppercase tracking-widest mb-2">Editor's Choice</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md text-white max-w-md leading-tight">Artisan Pizzas, 50% Off Today.</h2>
+<p class="text-white/80 mt-2 font-body-md max-w-sm">Experience the authentic taste of Naples delivered to your doorstep.</p>
+</div>
+</div>
+<div class="md:col-span-4 relative rounded-3xl overflow-hidden group cursor-pointer h-[200px] md:h-full">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A vibrant salad bowl with grilled salmon, avocado, and fresh greens arranged beautifully in a minimalist white bowl. The background is a soft light-mode grey, with bright, natural window lighting creating soft shadows. The overall aesthetic is clean, healthy, and ultra-modern startup style with a focus on high-fidelity food textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC31gXKw59ezIkNL3pBVH6ZiIzHwJtRPxtAMVXDv-S0H0JgoZzYHbDvvPRNN436Og_cRNEhUd4dOTnGya2q7TlQ4tD8kGdyPk_NpVz5mUXPZs2P0fQlLF09rH4HxHOaBkW1DiSRSjUIdW3rxrRf7eJiWIqK7-0YH0cqMiDqJzz30UTXHApH0kTjNgtybN0rGkvHdzaD2aHxl7FemjbQhVvFZtwcCocag7cB-aJ_xYRD0Br0xSgkR7QK_RFN9GzH_MBJZLC-AcPxyg"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/10 transition-colors"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-between">
+<div class="bg-white/90 backdrop-blur-md self-start px-3 py-1 rounded-full text-primary font-bold text-label-sm">NEW</div>
+<div>
+<h3 class="font-headline-md text-white drop-shadow-md">The Healthy Collective</h3>
+<p class="text-white/90 font-label-sm">Guilt-free indulgence starting at ₹199</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Top Restaurants Carousel -->
+<section class="mt-12">
+<div class="px-4 flex justify-between items-end mb-6">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Top Restaurants in Patna</h2>
+<p class="text-on-surface-variant font-body-md">Curated by our food experts</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-1 hover:gap-2 transition-all">
+                    View all <span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="flex gap-6 overflow-x-auto hide-scrollbar px-4 pb-4">
+<!-- Card 1 -->
+<div class="flex-shrink-0 w-72 bg-white rounded-3xl border border-border-subtle shadow-sm hover:shadow-xl transition-all group overflow-hidden">
+<div class="relative h-44 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Elegant restaurant interior with warm ambient lighting and modern minimalist furniture. The focus is on a cozy corner booth with soft leather textures and clean lines. The atmosphere is sophisticated and inviting, utilizing a palette of warm oranges and soft neutrals in a high-key light mode setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQoIom4ExN_QTOQKmcztVxH2hiH7PDestLq9iJPNnmpRvETX4AqPQb1U8SIaoswakxRnQtf7TpM81M9Dh8MPmisUpZucn-rEEpk8Pg7JZCIZBqLhjs4JL_-cxBRBNGm1xfzICsNPHp0h54cxAOea-kq6BfSFlpYQbrb0EiFWhl1IjH-h3LjfI9t3rnpK_pVPPn6dvPqs9OgGuAClTxbLTeBdolNZr3TdBJ65mWU3TGzJ32ttsHxALd41hjywwuhpFkx310-_zxnQ"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-2 py-1 rounded-lg flex items-center gap-1 text-primary font-bold text-label-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.8
+                        </div>
+</div>
+<div class="p-5">
+<h4 class="font-headline-md text-[18px] text-on-surface mb-1">Bite Me Bistro</h4>
+<p class="text-on-surface-variant text-label-sm mb-4">Continental • Italian • Desserts</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-on-secondary-container bg-secondary-container/30 px-2 py-1 rounded-md">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="text-label-sm">25-30 min</span>
+</div>
+<span class="text-success font-bold text-label-sm uppercase tracking-wider">Open</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex-shrink-0 w-72 bg-white rounded-3xl border border-border-subtle shadow-sm hover:shadow-xl transition-all group overflow-hidden">
+<div class="relative h-44 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A busy modern open-kitchen restaurant scene with chefs preparing food in the background. The foreground shows a sleek marble counter with polished brass accents. The lighting is bright and airy, capturing a professional, high-energy environment typical of a top-tier startup-era food establishment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDagmFLqA011UCkID1VGE75Sn-gBxmBdQ2QSb1VmAm1uEYh039meqVrkVDOLZdAXJry9Uhnu6nMD1O9ggX97R2fw89uCjkauRj11PfI_5j5xKI_j-7PjeuPGTh70dZdOa5InOeJj7QAOCRqTyU9_hgORMTpe1W8seIiSd-OzZ0YdqJYHp6YZIN655nC0hUn04ppEQVMwDmsSm2onH9w9ZlWTwkLdFGa8CdcHxI4wAQlBbMfRRZMxy7ibh7LEyROemizv8-Sq3OTEQ"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-2 py-1 rounded-lg flex items-center gap-1 text-primary font-bold text-label-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.5
+                        </div>
+</div>
+<div class="p-5">
+<h4 class="font-headline-md text-[18px] text-on-surface mb-1">The Golden Grain</h4>
+<p class="text-on-surface-variant text-label-sm mb-4">Indian • Tandoori • Biryani</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-on-secondary-container bg-secondary-container/30 px-2 py-1 rounded-md">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="text-label-sm">35-40 min</span>
+</div>
+<span class="text-success font-bold text-label-sm uppercase tracking-wider">Open</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex-shrink-0 w-72 bg-white rounded-3xl border border-border-subtle shadow-sm hover:shadow-xl transition-all group overflow-hidden">
+<div class="relative h-44 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A close-up of a steaming bowl of spicy ramen with a perfectly soft-boiled egg and green onions. The background is a minimalist dark-toned Japanese eatery. Soft golden light highlights the steam and the rich colors of the broth. The image conveys speed, freshness, and high-quality street food with a premium touch." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoH3v2t9JAiuoOnWJaBEmehFXo0LVPDiEECz1LZBTvH-46bUYkJLqmVRo3TOAk-cYHaKFHtiUefRr_JBAsvsttKpgwiwEmE8L9OiorkTIF0GVYb2BxWbN6tPSnUjKIN0GA87XcXkiZ9XmHtHCp4kgeoctrSvnwiR62xAd4rtwSGTsbYn_Bsn7kcGCMrMIdEXUL9ge51NKudsYcETTBsWjH_dRNgSm7V8apb2RvJiYsGlVKgqFTbaOzf5whHRgCq4zXPn_Evs1ekQ"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-2 py-1 rounded-lg flex items-center gap-1 text-primary font-bold text-label-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.2
+                        </div>
+</div>
+<div class="p-5">
+<h4 class="font-headline-md text-[18px] text-on-surface mb-1">Noodle Nest</h4>
+<p class="text-on-surface-variant text-label-sm mb-4">Chinese • Pan Asian • Ramen</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-on-secondary-container bg-secondary-container/30 px-2 py-1 rounded-md">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="text-label-sm">20-25 min</span>
+</div>
+<span class="text-error font-bold text-label-sm uppercase tracking-wider">Closed</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Nearby Restaurants List -->
+<section class="mt-12 px-4">
+<div class="mb-6">
+<h2 class="font-headline-md text-headline-md text-on-surface">Nearby Restaurants</h2>
+<p class="text-on-surface-variant font-body-md">Fresh food around you</p>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Vertical List Item 1 -->
+<div class="flex flex-col md:flex-row gap-4 bg-white p-3 rounded-3xl border border-border-subtle hover:shadow-lg transition-all cursor-pointer">
+<div class="w-full md:w-48 h-40 flex-shrink-0 rounded-2xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A modern kitchen workstation showing fresh ingredients like tomatoes, avocados, and artisan bread being prepared for gourmet sandwiches. The setting is clean and high-key with soft natural lighting. The overall feel is that of a premium, fast-casual startup kitchen that values transparency and quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-SXwS-1rxERinuMSH27MngpEiZKjULLmt_uetr-6JUXkg9kLwgTOaXGiHNUPchlSv2WfB-JkIFbZuhHiEWe0mh-6SMLAEOQogapJ0DFsglZu0h589cY6QlHLFJ1VLF1eO8mfU6XZwM5vbTX09KNd_c7DbSg0J3neYmqgkJs5OeLW3PiL4OZZ1RVN0_AOZzWwKCTMA3AJyKsgby-PLgfo4tpabITBmZX72bBwsM86sB4OitYlZy4xLLoUsZxBjeObrDy82jarhfA"/>
+</div>
+<div class="flex-grow flex flex-col justify-center">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline-md text-[20px] text-on-surface">Burger Central</h4>
+<p class="text-on-surface-variant text-body-md">American • Fast Food • Shakes</p>
+</div>
+<div class="bg-surface-container px-3 py-1 rounded-full text-on-surface-variant font-bold text-label-sm">4.1</div>
+</div>
+<div class="mt-4 flex items-center gap-6">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">near_me</span>
+<span class="text-label-sm">1.2 km</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+<span class="text-label-sm">₹250 for two</span>
+</div>
+<div class="hidden md:flex items-center gap-2 text-success font-bold text-label-sm">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>QuickBite Trusted</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Vertical List Item 2 -->
+<div class="flex flex-col md:flex-row gap-4 bg-white p-3 rounded-3xl border border-border-subtle hover:shadow-lg transition-all cursor-pointer">
+<div class="w-full md:w-48 h-40 flex-shrink-0 rounded-2xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A close-up of a classic cheeseburger with melting cheese and fresh lettuce on a toasted brioche bun. The image is captured with shallow depth of field, making the burger stand out against a soft, out-of-focus restaurant background. The lighting is warm and golden, emphasizing the deliciousness and high-quality ingredients." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiom6Iwq-oseWCbBsOZDBwpv4Txep3OOTKy1hsJmOmimCsgSL2WOiKX6wpJRvcD4izJBqrZWZ9rhx1_8DoUIklisoIU2-KJprmU6pgVxIU1RKJ6kUuipg6puCmrWJQSVQmdEtmp5Qm8mHXCpVm5yWeWcdbSOa6ELok3rT5gyrEqtZg4iE6FdNjwE_zxNdHOajRsYcTDjfC6nFhah3xl95zjtNLVBpyJXyQR9XpIhxrpAZcyDRXe5CQSZXrc0brOrdR4kE_30n1eg"/>
+</div>
+<div class="flex-grow flex flex-col justify-center">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline-md text-[20px] text-on-surface">Dosa Plaza</h4>
+<p class="text-on-surface-variant text-body-md">South Indian • Healthy</p>
+</div>
+<div class="bg-surface-container px-3 py-1 rounded-full text-on-surface-variant font-bold text-label-sm">4.6</div>
+</div>
+<div class="mt-4 flex items-center gap-6">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">near_me</span>
+<span class="text-label-sm">2.8 km</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+<span class="text-label-sm">₹150 for two</span>
+</div>
+<div class="flex items-center gap-2 text-success font-bold text-label-sm">
+<span class="material-symbols-outlined text-[18px]">speed</span>
+<span>Super Fast</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action: Ask AI to Suggest -->
+<div class="fixed bottom-24 right-6 z-50">
+<button class="ai-pulse bg-primary-container text-white px-6 py-4 rounded-3xl flex items-center gap-3 shadow-2xl hover:scale-105 active:scale-95 transition-all glass border border-white/20">
+<div class="flex items-center justify-center w-10 h-10 bg-white/20 rounded-2xl">
+<span class="material-symbols-outlined text-white animate-spin-slow" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="text-left">
+<p class="font-label-sm text-[12px] opacity-80 leading-none mb-1">Confused?</p>
+<p class="font-bold text-[15px] leading-none">Ask AI Suggest</p>
+</div>
+</button>
+</div>
+<!-- Bottom Navigation Bar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-lg border-t border-border-subtle shadow-[0_-4px_12px_rgba(0,0,0,0.05)] flex justify-around items-center px-4 py-3 pb-safe">
+<a class="flex flex-col items-center justify-center text-primary font-bold scale-110" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-primary-fixed-dim/20 transition-all rounded-xl p-1" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-sm text-label-sm">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-primary-fixed-dim/20 transition-all rounded-xl p-1" href="#">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-label-sm text-label-sm">AI Suggest</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-primary-fixed-dim/20 transition-all rounded-xl p-1" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-sm text-label-sm">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-primary-fixed-dim/20 transition-all rounded-xl p-1" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<script>
+        // Micro-interactions for category pills
+        const pills = document.querySelectorAll('.flex-shrink-0');
+        pills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                pills.forEach(p => {
+                    p.classList.remove('bg-primary-container', 'text-on-primary', 'font-semibold');
+                    p.classList.add('bg-white', 'text-on-surface-variant');
+                });
+                pill.classList.remove('bg-white', 'text-on-surface-variant');
+                pill.classList.add('bg-primary-container', 'text-on-primary', 'font-semibold');
+            });
+        });
+
+        // Search bar focus effect
+        const searchInput = document.querySelector('input[type="text"]');
+        const searchContainer = searchInput.parentElement;
+        searchInput.addEventListener('focus', () => {
+            searchContainer.classList.add('scale-[1.02]');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchContainer.classList.remove('scale-[1.02]');
+        });
+    </script>
+</body></html>

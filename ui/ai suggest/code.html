@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QuickBite | AI Suggest</title>
+<link rel="stylesheet" href="../style.css"/>
+<style>
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .ai-shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite linear;
+        }
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        .glow-border {
+            position: relative;
+        }
+        .glow-border::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(45deg, #ff6b35, #5E6AD2, #f4be4e);
+            z-index: -1;
+            border-radius: inherit;
+            opacity: 0.3;
+        }
+        .step-transition {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 dark:bg-surface-container-highest/80 backdrop-blur-xl docked full-width top-0 sticky border-b border-border-subtle dark:border-outline-variant shadow-sm z-[100] h-16 flex justify-between items-center w-full px-container-max mx-auto">
+<div class="flex items-center gap-8">
+<span class="font-display-lg text-display-lg-mobile font-black text-primary tracking-tighter">QuickBite</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Explore</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 transition-colors duration-200" href="#">AI Suggest</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Orders</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Profile</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined p-2 hover:bg-surface-container rounded-full text-on-surface-variant transition-colors">notifications</button>
+<button class="flex items-center gap-2 bg-primary text-on-primary px-4 py-2 rounded-xl font-bold scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span>Cart</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-border-subtle">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="A professional headshot of a smiling user with short hair, captured in warm studio lighting. The background is a clean, minimalist off-white, maintaining the premium Startup 2026 aesthetic. High resolution and modern digital photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALCESOn2Kxn1rMwVbUCQGw3orDAB4nNKPT9pG4XcsXY5HXCoALqn7XiCApVv6Ex5bZ85xtWBOGVoy8pJY5razvgF_M0RwF9Nv8aii0bl1nNlyOYW8rmRKQ4KjBmRLFbrjIMaD-zb48mRbq2MXxqp42axevDbMDN7UkER878Ls69iLdckhNd9hIrY8c5p63PztyOV5nOuVgXaYBJlyHR1YBlx3TZWMA5acysWQv-0i2JE4Y1ZZXi7uW-Je6_QP92pJuMOMbLDMyhA"/>
+</div>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-4 md:px-gutter py-stack-lg pb-32">
+<!-- AI Wizard Section -->
+<section class="relative py-12 mb-16 overflow-hidden" id="ai-wizard">
+<!-- Background Atmospheric Glows -->
+<div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] -z-10"></div>
+<div class="absolute bottom-0 right-1/4 w-96 h-96 bg-ai-glow/10 rounded-full blur-[120px] -z-10"></div>
+<div class="text-center mb-12">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed mb-4">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">AI Culinary Concierge</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4">What's the vibe today?</h1>
+<div class="w-full max-w-xl mx-auto h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[14.28%] transition-all duration-700 ease-out shadow-[0_0_12px_rgba(171,53,0,0.4)]" id="progress-bar"></div>
+</div>
+</div>
+<div class="max-w-4xl mx-auto relative min-h-[400px]">
+<!-- Step 1: Mood (Active by default) -->
+<div class="step-transition opacity-100 scale-100 flex flex-col items-center" id="step-1">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
+<button class="group flex flex-col items-center p-6 bg-white border border-border-subtle rounded-3xl hover:border-primary hover:shadow-xl transition-all duration-300" onclick="nextStep(1)">
+<span class="material-symbols-outlined text-4xl mb-3 text-secondary group-hover:text-primary transition-colors">sentiment_very_satisfied</span>
+<span class="font-bold text-on-surface">Happy</span>
+</button>
+<button class="group flex flex-col items-center p-6 bg-white border border-border-subtle rounded-3xl hover:border-primary hover:shadow-xl transition-all duration-300" onclick="nextStep(1)">
+<span class="material-symbols-outlined text-4xl mb-3 text-secondary group-hover:text-primary transition-colors">bedtime</span>
+<span class="font-bold text-on-surface">Chill</span>
+</button>
+<button class="group flex flex-col items-center p-6 bg-white border border-border-subtle rounded-3xl hover:border-primary hover:shadow-xl transition-all duration-300" onclick="nextStep(1)">
+<span class="material-symbols-outlined text-4xl mb-3 text-secondary group-hover:text-primary transition-colors">bolt</span>
+<span class="font-bold text-on-surface">Energetic</span>
+</button>
+<button class="group flex flex-col items-center p-6 bg-white border border-border-subtle rounded-3xl hover:border-primary hover:shadow-xl transition-all duration-300" onclick="nextStep(1)">
+<span class="material-symbols-outlined text-4xl mb-3 text-secondary group-hover:text-primary transition-colors">coffee</span>
+<span class="font-bold text-on-surface">Productive</span>
+</button>
+</div>
+</div>
+<!-- Placeholder for subsequent steps in actual JS logic -->
+<div class="hidden absolute inset-0 flex flex-col items-center justify-center text-center" id="loading-ai">
+<div class="relative w-24 h-24 mb-6">
+<div class="absolute inset-0 border-4 border-primary/20 rounded-full"></div>
+<div class="absolute inset-0 border-4 border-primary rounded-full border-t-transparent animate-spin"></div>
+<span class="material-symbols-outlined absolute inset-0 flex items-center justify-center text-primary text-3xl animate-pulse">auto_awesome</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Analyzing Patna's Weather &amp; Trends...</h3>
+<p class="text-on-surface-variant max-w-md">Syncing with your spicy preferences and rainy weather context.</p>
+</div>
+</div>
+</section>
+<!-- Results Section (Initially hidden or shown as demo) -->
+<section class="space-y-stack-lg" id="results">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">AI Suggested for You</h2>
+<div class="p-4 bg-secondary-container/30 border border-secondary-container rounded-2xl flex items-start gap-3 max-w-2xl">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">info</span>
+<p class="text-on-secondary-container font-medium">
+                            Recommended because it’s <span class="text-primary font-bold">rainy weather in Patna</span> and you prefer <span class="text-primary font-bold">spicy comfort food</span> based on your profile history.
+                        </p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 border border-border-subtle rounded-xl font-bold hover:bg-surface-container-high transition-colors">Modify Preference</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Food Card 1 -->
+<div class="group bg-white border border-border-subtle rounded-[32px] overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
+<div class="relative h-64 overflow-hidden">
+<img alt="Spicy Biryani" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A steaming plate of spicy Chicken Biryani with vibrant orange and red rice, garnished with fresh cilantro. The setting is a cozy, low-lit restaurant in Patna during a rainy evening. Soft ambient lighting highlights the steam and the rich texture of the food. 2026 premium startup aesthetic, hyper-realistic food photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh7i2IQcemRWpVwoAuWy7WdBJoX1nirN1Pt1lZ_l3zmZYWXuPGsaAvXhD1V2kC2MwQVSl5_2myUJjVnJS0h3U42UO5Uzlqhdt3OFiMS1A69POfx5-on9c1BA_FuF04F8u1G6CHP_8YjUlJqRSUe7OHHvZY-0NmKyRxw8oM3V6t5OUr0uEhufrBSijC2M4BCXjaCdedV-cjtET6rjoEF2TdMBGLF9XVX0SUliVebg06vN5H-1rt0zgcfys7I2zdxqcK-CjDeQI_5Q"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-label-sm font-bold text-primary">Best Match</span>
+<span class="px-3 py-1 bg-black/50 backdrop-blur-md rounded-full text-label-sm font-bold text-white flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span> 25-30 min
+                            </span>
+</div>
+<button class="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-md">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Royal Awadhi Biryani</h3>
+<p class="text-on-surface-variant">The Great Indian Kitchen</p>
+</div>
+<div class="text-right">
+<span class="font-display-lg text-headline-md text-primary">₹450</span>
+</div>
+</div>
+<div class="flex items-center gap-4 mb-6">
+<div class="flex items-center gap-1 bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-label-sm">4.8</span>
+</div>
+<span class="text-on-surface-variant font-medium">• Spicy Comfort</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:brightness-110 transition-all shadow-[0_4px_0_#832600] active:translate-y-[2px] active:shadow-none">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+                            Add to Cart
+                        </button>
+</div>
+</div>
+<!-- Food Card 2 -->
+<div class="group bg-white border border-border-subtle rounded-[32px] overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
+<div class="relative h-64 overflow-hidden">
+<img alt="Paneer Butter Masala" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A bowl of rich, creamy Paneer Butter Masala served with buttery garlic naan. The lighting is warm and golden, evoking a sense of spicy comfort food. High-end food styling with focus on the rich gravy texture. Modern, clean 2026 startup UI design language." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYiOkGaWioFM-injsirtdq-Heq85LbMy0PhgARiR3r_asQBURXwqVGu5OC19tVQULHMZK9w7ed2HJ4n5M3clJ0AZWSwuihQjjNjqjBIrOJLBsrcAzXXfjIRZH0X780rMWGOp1gEZaZQu0yfiHPi_hXjt8J8xrqaBQtWIETILsLKV_1Y3HbrDPwi3wPiMql2W0SR0GUnvj0EYURyVDMb7luVAfQFas5Cc1eft6zuqfjKnNaqxo_9kOG2231E4GmBdtQf6pRp1tGqA"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-label-sm font-bold text-success">Vegetarian</span>
+<span class="px-3 py-1 bg-black/50 backdrop-blur-md rounded-full text-label-sm font-bold text-white flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span> 20 min
+                            </span>
+</div>
+<button class="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-md">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Paneer Tikka Masala</h3>
+<p class="text-on-surface-variant">Veggie Paradise</p>
+</div>
+<div class="text-right">
+<span class="font-display-lg text-headline-md text-primary">₹320</span>
+</div>
+</div>
+<div class="flex items-center gap-4 mb-6">
+<div class="flex items-center gap-1 bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-label-sm">4.6</span>
+</div>
+<span class="text-on-surface-variant font-medium">• Monsoon Special</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:brightness-110 transition-all shadow-[0_4px_0_#832600] active:translate-y-[2px] active:shadow-none">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+                            Add to Cart
+                        </button>
+</div>
+</div>
+<!-- Food Card 3 -->
+<div class="group bg-white border border-border-subtle rounded-[32px] overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
+<div class="relative h-64 overflow-hidden">
+<img alt="Spicy Momos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A platter of hot, spicy momos served with a deep red chili chutney. The dish is presented on a minimalist slate plate, with rain droplets visible on a window in the blurred background. Cinematic lighting, deep orange and red tones. High-precision 2026 startup aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLTcJ6ZtDbME9XpkjLdzGEfOEDOhRpvJb0oOLESVZ3JQDktkBF8M6E91z0QX9gkTsAuZ2kkcW2QNxRNz-HW_h_DYMOWKVmwbLU0s31CxQFgEhhZfepsX3LzeUAxH50lbzGDBd_Vnp3Fum5PdBPu2g9Hxq74OCneRkVOEh9jNpSEcb507B8cKSGv58J5cKRyWiMt5bwkNGaCvch-FxKmzpFejhR6gxgRIG0C3LAkoBBQJvYtLW2bZi_jASXaJsGGVk_FCRv1iTU5g"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-label-sm font-bold text-primary">Trending</span>
+<span class="px-3 py-1 bg-black/50 backdrop-blur-md rounded-full text-label-sm font-bold text-white flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span> 15 min
+                            </span>
+</div>
+<button class="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-md">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Darjeeling Spicy Momos</h3>
+<p class="text-on-surface-variant">The Momo Co.</p>
+</div>
+<div class="text-right">
+<span class="font-display-lg text-headline-md text-primary">₹180</span>
+</div>
+</div>
+<div class="flex items-center gap-4 mb-6">
+<div class="flex items-center gap-1 bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-label-sm">4.9</span>
+</div>
+<span class="text-on-surface-variant font-medium">• Perfect Snacking</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:brightness-110 transition-all shadow-[0_4px_0_#832600] active:translate-y-[2px] active:shadow-none">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+                            Add to Cart
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface/90 dark:bg-surface-container-highest/90 backdrop-blur-lg border-t border-border-subtle dark:border-outline-variant shadow-[0_-4px_12px_rgba(0,0,0,0.05)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-primary-fixed-dim/20 transition-all" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-primary-fixed-dim/20 transition-all" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-sm text-label-sm">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary font-bold scale-110 animate-pulse-subtle active:bg-primary-fixed-dim/20 transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-sm text-label-sm">AI Suggest</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-primary-fixed-dim/20 transition-all" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-sm text-label-sm">Orders</span>
+</a>
+</nav>
+<script>
+        let currentStep = 1;
+        const totalSteps = 7;
+        const questions = [
+            "What's the vibe today?",
+            "How hungry are you?",
+            "What's your budget?",
+            "How much spice can you handle?",
+            "Any dietary preferences?",
+            "The weather in Patna is rainy. Cozy vibes?",
+            "Delivery or Pick-up?"
+        ];
+
+        function nextStep(step) {
+            const currentEl = document.getElementById(`step-${step}`);
+            const progress = document.getElementById('progress-bar');
+            
+            if (currentStep < totalSteps) {
+                currentStep++;
+                progress.style.width = `${(currentStep / totalSteps) * 100}%`;
+                
+                // Transition logic for UI
+                currentEl.classList.add('opacity-0', 'scale-95');
+                setTimeout(() => {
+                    currentEl.innerHTML = getStepContent(currentStep);
+                    currentEl.classList.remove('opacity-0', 'scale-95');
+                    document.querySelector('h1').innerText = questions[currentStep - 1];
+                }, 500);
+            } else {
+                showLoading();
+            }
+        }
+
+        function getStepContent(step) {
+            const contents = {
+                2: `<div class="grid grid-cols-2 gap-4 w-full">
+                        <button onclick="nextStep(2)" class="p-6 bg-white border border-border-subtle rounded-3xl hover:border-primary transition-all">
+                            <span class="font-bold text-lg block mb-1">Peckish</span>
+                            <span class="text-sm text-on-surface-variant">Just a snack</span>
+                        </button>
+                        <button onclick="nextStep(2)" class="p-6 bg-white border border-border-subtle rounded-3xl hover:border-primary transition-all">
+                            <span class="font-bold text-lg block mb-1">Starving</span>
+                            <span class="text-sm text-on-surface-variant">Full course meal</span>
+                        </button>
+                    </div>`,
+                3: `<div class="flex flex-col gap-4 w-full max-w-md">
+                        <button onclick="nextStep(3)" class="flex justify-between items-center p-6 bg-white border border-border-subtle rounded-3xl hover:border-primary transition-all">
+                            <span class="font-bold">Economic</span>
+                            <span class="text-primary font-bold">₹</span>
+                        </button>
+                        <button onclick="nextStep(3)" class="flex justify-between items-center p-6 bg-white border border-border-subtle rounded-3xl hover:border-primary transition-all">
+                            <span class="font-bold">Premium</span>
+                            <span class="text-primary font-bold">₹₹₹</span>
+                        </button>
+                    </div>`,
+                4: `<div class="flex gap-4 overflow-x-auto pb-4 w-full">
+                        ${['Mild', 'Medium', 'Hot', 'Nuclear'].map(s => `
+                            <button onclick="nextStep(4)" class="flex-shrink-0 px-8 py-4 bg-white border border-border-subtle rounded-2xl hover:bg-primary-container hover:text-white font-bold transition-all">
+                                ${s}
+                            </button>
+                        `).join('')}
+                    </div>`,
+                5: `<div class="grid grid-cols-2 gap-4 w-full">
+                        <button onclick="nextStep(5)" class="p-8 bg-green-50 border border-green-200 rounded-3xl text-green-800 hover:bg-green-100 transition-all">
+                            <span class="material-symbols-outlined text-4xl mb-2">leafy_green</span>
+                            <span class="font-bold block">Veg</span>
+                        </button>
+                        <button onclick="nextStep(5)" class="p-8 bg-red-50 border border-red-200 rounded-3xl text-red-800 hover:bg-red-100 transition-all">
+                            <span class="material-symbols-outlined text-4xl mb-2">kebab_dining</span>
+                            <span class="font-bold block">Non-Veg</span>
+                        </button>
+                    </div>`,
+                6: `<div class="text-center p-8 glass glow-border rounded-3xl max-w-md">
+                        <span class="material-symbols-outlined text-primary text-6xl mb-4">rainy</span>
+                        <p class="mb-6 font-medium">It's currently 24°C with heavy rain in Patna. Recommend warm, fried, or spicy items?</p>
+                        <button onclick="nextStep(6)" class="bg-primary text-on-primary px-8 py-3 rounded-full font-bold">Absolutely</button>
+                    </div>`,
+                7: `<div class="grid grid-cols-2 gap-4 w-full">
+                        <button onclick="nextStep(7)" class="p-8 bg-white border border-border-subtle rounded-3xl hover:border-primary transition-all">
+                            <span class="material-symbols-outlined text-3xl mb-2">delivery_dining</span>
+                            <span class="font-bold block">Delivery</span>
+                        </button>
+                        <button onclick="nextStep(7)" class="p-8 bg-white border border-border-subtle rounded-3xl hover:border-primary transition-all">
+                            <span class="material-symbols-outlined text-3xl mb-2">shopping_bag</span>
+                            <span class="font-bold block">Pickup</span>
+                        </button>
+                    </div>`
+            };
+            return contents[step] || contents[7];
+        }
+
+        function showLoading() {
+            const wizard = document.getElementById('step-7'); // Last step
+            wizard.classList.add('hidden');
+            document.querySelector('h1').classList.add('hidden');
+            document.getElementById('loading-ai').classList.remove('hidden');
+            
+            setTimeout(() => {
+                document.getElementById('ai-wizard').classList.add('opacity-0', 'h-0', 'py-0', 'mb-0');
+                document.getElementById('results').classList.remove('opacity-0');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 2500);
+        }
+    </script>
+</body></html>

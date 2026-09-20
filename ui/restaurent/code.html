@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../style.css"/>
+<style>
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite linear;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #ab3500;
+            border-radius: 10px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen">
+<!-- Header / TopAppBar -->
+<header class="bg-surface/80 dark:bg-surface-container-highest/80 backdrop-blur-xl font-body-md text-body-md docked full-width top-0 sticky border-b border-border-subtle dark:border-outline-variant shadow-sm z-40">
+<div class="flex justify-between items-center w-full px-container-max mx-auto h-16">
+<div class="flex items-center gap-8">
+<span class="font-display-lg text-display-lg-mobile font-black text-primary tracking-tighter">QuickBite</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">Explore</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">AI Suggest</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Orders</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Profile</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">notifications</button>
+<div class="flex items-center gap-2 bg-primary-container text-white px-4 py-2 rounded-full font-bold scale-95 active:scale-90 transition-transform cursor-pointer">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="text-label-sm font-label-sm">Cart</span>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto pb-32">
+<!-- Hero Section -->
+<section class="relative h-[400px] md:h-[500px] w-full overflow-hidden md:rounded-b-3xl">
+<img class="w-full h-full object-cover" data-alt="A high-end modern restaurant interior with minimalist wooden tables, ambient warm architectural lighting, and floor-to-ceiling windows looking out onto a blurred urban cityscape at sunset. The atmosphere is sophisticated and premium, using a palette of warm oranges and crisp whites to match the brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABmmCwBz00Str8xjM3HMmQm5Qa-4HEM3XgRjG6u6sBjm1QnDZeFTLj7PNTiSS0-sDBXA1P-yMiardWXmUkLJuztvMLycFdl92rhGvUJvVJgQMVe3v1h7fIvJ0kGp6_XpTLdx4gGzaEeDqYhHba1PXZoriUIwP1lxrrYeZ86GNEGXuC6e2xWjRV-bXFEeCqZ7bCH1rM4Jz6m5kkSmtpvOwBQKFPYVLkSh-go0jN0R1wDU-1sZNvGxL1K3B1Did5M6FWkbAwYzFrig"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<!-- Glassmorphism Info Overlay -->
+<div class="absolute bottom-8 left-margin-mobile right-margin-mobile md:left-gutter md:bottom-12 glass p-6 md:p-8 rounded-2xl max-w-2xl">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="bg-success text-white text-[10px] px-2 py-0.5 rounded-full font-bold tracking-wider uppercase">Open Now</span>
+<div class="flex items-center text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-label-sm ml-1">4.8 (500+ Reviews)</span>
+</div>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface font-black">Lumière Gastronomy</h1>
+<p class="text-on-surface-variant font-medium flex items-center gap-2">
+<span>Modern European</span> • <span>Fine Dining</span> • <span>$$$</span>
+</p>
+<div class="flex flex-wrap gap-4 mt-4 pt-4 border-t border-white/20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<span class="font-bold">25-30 mins</span>
+</div>
+<div class="flex items-center gap-2 border-l border-white/20 pl-4">
+<span class="material-symbols-outlined text-primary">distance</span>
+<span class="font-bold">2.4 km</span>
+</div>
+<div class="flex items-center gap-2 border-l border-white/20 pl-4">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span class="font-bold">QuickBite Premium</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Navigation (Sticky) -->
+<nav class="sticky top-16 bg-surface/95 backdrop-blur-md z-30 py-4 px-margin-mobile md:px-0 border-b border-border-subtle">
+<div class="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth">
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-primary text-white font-bold transition-all shadow-md">Starters</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-surface-variant text-on-surface-variant font-medium hover:bg-surface-container-high transition-all">Main Course</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-surface-variant text-on-surface-variant font-medium hover:bg-surface-container-high transition-all">Desserts</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-surface-variant text-on-surface-variant font-medium hover:bg-surface-container-high transition-all">Beverages</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full border-2 border-ai-glow/30 text-ai-glow font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">auto_awesome</span> AI Recommendations
+                </button>
+</div>
+</nav>
+<!-- Menu Sections -->
+<div class="px-margin-mobile md:px-0 mt-8 space-y-12">
+<!-- Starters -->
+<section id="starters">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline-md text-headline-md text-on-surface">Starters</h2>
+<span class="text-on-surface-variant font-medium">8 Items</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Food Card 1 -->
+<div class="bg-white rounded-2xl p-4 border border-border-subtle shadow-sm hover:shadow-md transition-all group flex gap-4">
+<div class="relative w-32 h-32 flex-shrink-0 overflow-hidden rounded-xl bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A gourmet appetizer of seared scallops presented on a minimalist white ceramic plate with a vibrant pea purée and micro-greens. The lighting is crisp and overhead, emphasizing the textures of the perfectly browned scallops in a professional studio food photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzhfH6CuJ3qRqoWu0nXK7XvXPbjZgWwBK4UQOAvNtl5Piq9tBXjruDkbOCYKixS53Xti3o3OPGMkEuyqS6XCFH8VkMAyKEHf6qlZYb7gZS5VHNX1zhy_iJ04CX7c8Bu1EnYtNbpw3C6d43tK3irKo9dE_SUbGdZQfnQuxl-LTYwEvqqfynEUIw_MeEdketoJEe0TdOKDUGZoNY1GqJy49V66zjEIjZUUBkY7lV9NgJ3KJE1XiVLHlfl70O0x_GITXwoV5sAfcRCw"/>
+<div class="absolute top-2 left-2 bg-white/90 backdrop-blur-md p-1 rounded-md shadow-sm">
+<div class="w-3 h-3 border-2 border-success rounded-full flex items-center justify-center p-0.5">
+<div class="w-full h-full bg-success rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div>
+<h3 class="font-bold text-on-surface leading-tight">Truffle Arancini</h3>
+<p class="text-label-sm text-on-surface-variant mt-1 line-clamp-2">Crispy risotto balls with black truffle and mozzarella core.</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="font-black text-primary">₹450</span>
+<div class="stepper-container flex items-center bg-surface-container-low rounded-full p-1">
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-variant text-on-surface-variant transition-colors" onclick="updateQty(this, -1)">-</button>
+<span class="px-3 font-bold text-label-sm">0</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white shadow-sm hover:brightness-110 transition-all" onclick="updateQty(this, 1)">+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Food Card 2 -->
+<div class="bg-white rounded-2xl p-4 border border-border-subtle shadow-sm hover:shadow-md transition-all group flex gap-4">
+<div class="relative w-32 h-32 flex-shrink-0 overflow-hidden rounded-xl bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Thinly sliced smoked salmon carpaccio arranged elegantly on a dark slate plate, garnished with capers, red onion slivers, and a drizzle of premium olive oil. The image is captured from a high angle with soft, diffuse lighting that creates a high-end, contemporary dining aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrKYv5f-qdjwHCDCcSNl0d0h7Cd-1iXC3nYMPtJKV_tkVgjIus_iUYMUeweWNS2hwB4X4fSsYqMqou7HNUuKMcxeQz0zDJ1CmYUG_WclnlKeqOvD9QdXlzb5kZef-N_xzIZIHIWvzKtRsNv2KJh1QQ3t11_lwe_prwdwetIHzKGQODobs5hwKubOagYP6HKclmnufW5dFPZjO1y6glWQhFcCD8txVh8c3hycdf9zvxZ1Agoc0ZAeK2dJdPYe60-6S6-CL6mYNYyA"/>
+<div class="absolute top-2 left-2 bg-white/90 backdrop-blur-md p-1 rounded-md shadow-sm">
+<div class="w-3 h-3 border-2 border-error rounded-full flex items-center justify-center p-0.5">
+<div class="w-full h-full bg-error rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div>
+<h3 class="font-bold text-on-surface leading-tight">Salmon Carpaccio</h3>
+<p class="text-label-sm text-on-surface-variant mt-1 line-clamp-2">Hand-sliced smoked salmon with capers and lemon zest.</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="font-black text-primary">₹680</span>
+<div class="stepper-container flex items-center bg-surface-container-low rounded-full p-1">
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-variant text-on-surface-variant transition-colors" onclick="updateQty(this, -1)">-</button>
+<span class="px-3 font-bold text-label-sm">0</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white shadow-sm hover:brightness-110 transition-all" onclick="updateQty(this, 1)">+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Food Card 3 (AI Recommended) -->
+<div class="bg-white rounded-2xl p-4 border-2 border-ai-glow/20 shadow-lg shadow-ai-glow/5 hover:shadow-ai-glow/10 transition-all group flex gap-4 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-12 h-12 bg-ai-glow/10 rotate-45 flex items-end justify-center pb-1">
+<span class="material-symbols-outlined text-[10px] text-ai-glow" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="relative w-32 h-32 flex-shrink-0 overflow-hidden rounded-xl bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern interpretation of a Caesar salad with charred romaine hearts, parmesan crisps, and a soft-boiled quail egg. The dish is presented on a textured grey plate with a clean, high-contrast lighting setup that emphasizes the vibrant green and gold colors, reflecting a 2026 startup's design language." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRHi8dxwnEzFCxO9daZPSPSbQQYy3RGH1NeYeEY9GqCARPfwEnSWki1oFmnrTw3xcEgfnx9vj-Ba2N8UonbNbYrF8rzLGF5oYaAZ0wkBGBvYosmdlzRiA4bKjU8wCBXYJ8PS5D3duLl1VSdCVZ2CQjQ_qsMnXwmyaTPJySsyqTRACOVkABR_gieWGPR4alaHHzdEB0ThgLJ_LUXWzRfZfZuqP56_05FBngQaC9QI2q6xDWmiC_ptaHMkYX3O_al4Qq3o-YvOFVTQ"/>
+<div class="absolute top-2 left-2 bg-white/90 backdrop-blur-md p-1 rounded-md shadow-sm">
+<div class="w-3 h-3 border-2 border-success rounded-full flex items-center justify-center p-0.5">
+<div class="w-full h-full bg-success rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div>
+<div class="flex items-center gap-1 mb-1">
+<span class="text-[10px] font-bold text-ai-glow uppercase tracking-wider">AI Suggested</span>
+</div>
+<h3 class="font-bold text-on-surface leading-tight">Deconstructed Caesar</h3>
+<p class="text-label-sm text-on-surface-variant mt-1 line-clamp-2">Charred hearts, 24-month parmesan, and signature dressing.</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="font-black text-primary">₹520</span>
+<div class="stepper-container flex items-center bg-surface-container-low rounded-full p-1">
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-variant text-on-surface-variant transition-colors" onclick="updateQty(this, -1)">-</button>
+<span class="px-3 font-bold text-label-sm">0</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white shadow-sm hover:brightness-110 transition-all" onclick="updateQty(this, 1)">+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Course -->
+<section id="main-course">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline-md text-headline-md text-on-surface">Main Course</h2>
+<span class="text-on-surface-variant font-medium">12 Items</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Food Card 4 -->
+<div class="bg-white rounded-2xl p-4 border border-border-subtle shadow-sm hover:shadow-md transition-all group flex gap-4">
+<div class="relative w-32 h-32 flex-shrink-0 overflow-hidden rounded-xl bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A perfectly seared wagyu beef steak resting on a bed of creamy potato purée with a glossy red wine reduction drizzle. Garnished with roasted baby carrots and a sprig of thyme. The scene is lit with warm, dramatic side lighting to highlight the rich textures and premium quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8hzK7YhffwZQsZ4sa5wn7yeEw11UZYrJPCcQwosvo4ov0q7DSymAJ33jaNsogGHKyBBsrcF0ZtimfJgd0vGV4PQqyQwujyk5ACwjxT2ituQP5GSaPFav0DTCOUnRIvn6Kg-J0Dtv09AIJ6kyHCq-vyGbXEZUsxk87gec99hCtgXZUg-lgck3K7Gga7qbYJ-lUNKOcQBq3n0WTBwrvknMvSKEvLAZAaVoL6NfTIQwVBB9MjUXpnw7xOERloiGm_IAZS1EXNxwb2g"/>
+<div class="absolute top-2 left-2 bg-white/90 backdrop-blur-md p-1 rounded-md shadow-sm">
+<div class="w-3 h-3 border-2 border-error rounded-full flex items-center justify-center p-0.5">
+<div class="w-full h-full bg-error rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div>
+<h3 class="font-bold text-on-surface leading-tight">Wagyu Steak au Poivre</h3>
+<p class="text-label-sm text-on-surface-variant mt-1 line-clamp-2">A5 Wagyu, peppercorn crust, and truffled mash.</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="font-black text-primary">₹2,450</span>
+<div class="stepper-container flex items-center bg-surface-container-low rounded-full p-1">
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-variant text-on-surface-variant transition-colors" onclick="updateQty(this, -1)">-</button>
+<span class="px-3 font-bold text-label-sm">0</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white shadow-sm hover:brightness-110 transition-all" onclick="updateQty(this, 1)">+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Food Card 5 -->
+<div class="bg-white rounded-2xl p-4 border border-border-subtle shadow-sm hover:shadow-md transition-all group flex gap-4">
+<div class="relative w-32 h-32 flex-shrink-0 overflow-hidden rounded-xl bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A vibrant saffron-infused lobster risotto served in a shallow black bowl. Pieces of butter-poached lobster are nestled in the creamy rice, decorated with edible flowers and micro-herbs. The overhead studio lighting is bright and clean, emphasizing the luxurious orange and gold tones of the dish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiwHQ3B2Rwon4I3kyxvXQZVHqInKPdxJBB7p0j-wA5Mu6WaUbp_Xz3DQuzmwJWGOg6A3OxTlMx7uM7KZZC8DSZc341heKxXSW4bRtSQK2oR6IpwHxyamXcBE26x0dudXwsFTVTlM6dWkAftODsFOtpJis4kof9eNFri4RLqRqn0vqQjOqquUU5qLvFdFAnrNhG8-8tvH2KAU0G6r90qJmnyFuS5VeZqEPDt_IMdBX1p1c6xQwJy6mEXs7SeT3Dw9HVV4GlGThmpw"/>
+<div class="absolute top-2 left-2 bg-white/90 backdrop-blur-md p-1 rounded-md shadow-sm">
+<div class="w-3 h-3 border-2 border-error rounded-full flex items-center justify-center p-0.5">
+<div class="w-full h-full bg-error rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div>
+<h3 class="font-bold text-on-surface leading-tight">Saffron Lobster Risotto</h3>
+<p class="text-label-sm text-on-surface-variant mt-1 line-clamp-2">Arborio rice, Persian saffron, and butter-poached lobster.</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="font-black text-primary">₹1,850</span>
+<div class="stepper-container flex items-center bg-surface-container-low rounded-full p-1">
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-variant text-on-surface-variant transition-colors" onclick="updateQty(this, -1)">-</button>
+<span class="px-3 font-bold text-label-sm">0</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white shadow-sm hover:brightness-110 transition-all" onclick="updateQty(this, 1)">+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Food Card 6 -->
+<div class="bg-white rounded-2xl p-4 border border-border-subtle shadow-sm hover:shadow-md transition-all group flex gap-4">
+<div class="relative w-32 h-32 flex-shrink-0 overflow-hidden rounded-xl bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A minimalist vegetarian dish featuring roasted heirloom carrots, whipped goat cheese, toasted hazelnuts, and a drizzle of dark honey. The plate is artisanal ceramic, and the lighting is soft natural daylight, creating an organic and wholesome feel that aligns with a high-end health-conscious startup brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5vwPoFws1jAJUtWa1-uEBZRuzAIrro-LaqE6hpwKVVfqpsRnwE_M_9Vz0T3v7SHZgaxMag8Yix6vQRjxJJnHvavyoJsZqG3ClXRrMZJ7ZB57Olm1pWHVr0ZdPYn8sVGMz40Zesf3KC3WX9ft19xVMYoF3Qd3eyIo1ONwgTJxcdxt2zi0nCj3OLsUNlFWYMvOpMtLdFvNTrwFvIwdpdXyoeX0_Ndauy4QTVEJJXft8Cd2JWW9MbcnmZOwapMi6RlM7wVO-tdToRw"/>
+<div class="absolute top-2 left-2 bg-white/90 backdrop-blur-md p-1 rounded-md shadow-sm">
+<div class="w-3 h-3 border-2 border-success rounded-full flex items-center justify-center p-0.5">
+<div class="w-full h-full bg-success rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div>
+<h3 class="font-bold text-on-surface leading-tight">Wild Mushroom Polenta</h3>
+<p class="text-label-sm text-on-surface-variant mt-1 line-clamp-2">Creamy cornmeal with sautéed seasonal forest mushrooms.</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="font-black text-primary">₹950</span>
+<div class="stepper-container flex items-center bg-surface-container-low rounded-full p-1">
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-variant text-on-surface-variant transition-colors" onclick="updateQty(this, -1)">-</button>
+<span class="px-3 font-bold text-label-sm">0</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white shadow-sm hover:brightness-110 transition-all" onclick="updateQty(this, 1)">+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Sticky Cart Summary Bar -->
+<div class="fixed bottom-0 left-0 w-full z-50 bg-primary-container p-4 transform translate-y-full transition-transform duration-300" id="cart-bar">
+<div class="max-w-container-max mx-auto flex justify-between items-center px-4">
+<div class="flex items-center gap-4 text-white">
+<div class="flex flex-col">
+<span class="font-black text-body-md leading-none" id="cart-count">1 Item</span>
+<span class="text-label-sm font-medium opacity-90" id="cart-total">₹450</span>
+</div>
+<div class="w-px h-8 bg-white/20"></div>
+<span class="text-label-sm font-bold uppercase tracking-widest hidden md:block">Ready for checkout</span>
+</div>
+<button class="bg-white text-primary px-8 py-3 rounded-xl font-bold flex items-center gap-2 hover:scale-105 active:scale-95 transition-all shadow-lg">
+                View Cart
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Mobile Navigation (BottomNavBar) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface/90 dark:bg-surface-container-highest/90 backdrop-blur-lg border-t border-border-subtle dark:border-outline-variant shadow-[0_-4px_12px_rgba(0,0,0,0.05)] rounded-t-xl">
+<div class="flex flex-col items-center justify-center text-primary font-bold scale-110">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-label-sm font-label-sm">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">search</span>
+<span class="text-label-sm font-label-sm">Search</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="text-label-sm font-label-sm">AI Suggest</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="text-label-sm font-label-sm">Orders</span>
+</div>
+</nav>
+<script>
+        let totalItems = 0;
+        let totalPrice = 0;
+
+        function updateQty(btn, delta) {
+            const stepper = btn.closest('.stepper-container');
+            const qtySpan = stepper.querySelector('span');
+            const card = btn.closest('.group');
+            const priceStr = card.querySelector('.text-primary').innerText.replace('₹', '').replace(',', '');
+            const price = parseInt(priceStr);
+            
+            let currentQty = parseInt(qtySpan.innerText);
+            let nextQty = currentQty + delta;
+            
+            if (nextQty < 0) return;
+            
+            qtySpan.innerText = nextQty;
+            totalItems += delta;
+            totalPrice += (delta * price);
+
+            updateCartBar();
+        }
+
+        function updateCartBar() {
+            const cartBar = document.getElementById('cart-bar');
+            const cartCount = document.getElementById('cart-count');
+            const cartTotal = document.getElementById('cart-total');
+
+            if (totalItems > 0) {
+                cartBar.classList.remove('translate-y-full');
+                cartBar.classList.add('translate-y-0');
+                cartCount.innerText = `${totalItems} ${totalItems === 1 ? 'Item' : 'Items'}`;
+                cartTotal.innerText = `₹${totalPrice.toLocaleString()}`;
+            } else {
+                cartBar.classList.add('translate-y-full');
+                cartBar.classList.remove('translate-y-0');
+            }
+        }
+
+        // Horizontal scroll animation for categories
+        const catNav = document.querySelector('nav div');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        catNav.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - catNav.offsetLeft;
+            scrollLeft = catNav.scrollLeft;
+        });
+        catNav.addEventListener('mouseleave', () => isDown = false);
+        catNav.addEventListener('mouseup', () => isDown = false);
+        catNav.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - catNav.offsetLeft;
+            const walk = (x - startX) * 2;
+            catNav.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+</body></html>

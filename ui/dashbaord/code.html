@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QuickBite | AI Decides What You Eat Today</title>
+<link rel="stylesheet" href="../style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.04);
+        }
+        .ai-shimmer {
+            background: linear-gradient(90deg, transparent, rgba(94, 106, 210, 0.1), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 3s infinite linear;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .logo-bounce {
+            animation: bounce-subtle 3s ease-in-out infinite;
+        }
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+        .floating-bento {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(-10px) rotate(1deg); }
+            66% { transform: translateY(5px) rotate(-0.5deg); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary/20 selection:text-primary overflow-x-hidden">
+<!-- TopNavBar Shell -->
+<header class="bg-surface/80 dark:bg-surface-container-highest/80 backdrop-blur-xl border-b border-border-subtle dark:border-outline-variant shadow-sm docked full-width top-0 sticky z-50">
+<nav class="flex justify-between items-center w-full px-container-max mx-auto h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 logo-bounce">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xl" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+<span class="font-display-lg text-display-lg-mobile font-black text-primary tracking-tighter">QuickBite</span>
+</div>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md hover:text-primary transition-colors duration-200" href="#">Explore</a>
+<a class="text-on-surface-variant font-medium font-body-md text-body-md hover:text-primary transition-colors duration-200" href="#">AI Suggest</a>
+<a class="text-on-surface-variant font-medium font-body-md text-body-md hover:text-primary transition-colors duration-200" href="#">Orders</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant scale-95 active:scale-90 transition-transform">notifications</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold text-label-sm font-label-sm scale-95 active:scale-90 transition-transform hover:shadow-lg transition-all">Cart</button>
+</div>
+</nav>
+</header>
+<main class="relative">
+<!-- Hero Section -->
+<section class="relative pt-20 pb-32 md:pt-32 md:pb-48 px-margin-mobile overflow-hidden">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<!-- Left: Content -->
+<div class="relative z-10 space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container rounded-full text-on-secondary-container">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">The Future of Food Delivery</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-text-primary leading-tight">
+                        AI decides what <br/>
+<span class="text-primary relative inline-block">
+                            you eat today
+                            <svg class="absolute -bottom-2 left-0 w-full h-2 text-primary/30" preserveaspectratio="none" viewbox="0 0 100 10">
+<path d="M0 5 Q 25 0 50 5 T 100 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+</span>
+</h1>
+<p class="font-body-lg text-body-lg text-text-secondary max-w-lg leading-relaxed">
+                        Stop scrolling through endless menus. Our neural engine analyzes your mood, metabolism, and historical cravings to pick the perfect meal from top-rated local kitchens.
+                    </p>
+<div class="flex flex-col sm:flex-row items-center gap-4 pt-4">
+<button class="w-full sm:w-auto bg-primary text-on-primary px-8 py-4 rounded-xl font-bold text-body-md flex items-center justify-center gap-2 shadow-[0_4px_0_0_#832600] active:translate-y-[2px] active:shadow-[0_2px_0_0_#832600] transition-all">
+                            Start Ordering
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="w-full sm:w-auto glass-card text-primary px-8 py-4 rounded-xl font-bold text-body-md flex items-center justify-center gap-2 relative overflow-hidden group">
+<div class="absolute inset-0 ai-shimmer opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                            Try AI Suggest
+                        </button>
+</div>
+<div class="flex items-center gap-6 pt-8 border-t border-border-subtle max-w-sm">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-background object-cover" data-alt="A portrait of a young professional woman with a bright smile, standing in a sunlit urban kitchen environment. The lighting is soft and natural, emphasizing a clean and premium light-mode startup aesthetic. She represents a modern user of high-end productivity and lifestyle tools." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiz-L3fptvsTeR4ebDyi9LTV67CfoKkqhmDOUhXwuTmDX5iKIGGk8Lp0z9bk3WAFjl8YM95lZaSAbnCsPNnYNwjf9DQ9aNWI1UJExOcpmIml0kujan05jzBjgUWhWogqqbPjwE6Gr1RBOZiNUSybDsEieY59Wih2k-M46tvn2xGgAIdK0IsC0gval06ub_Ylsi-qPOkkBz-ab9VmYTfrMeJL0RoSgHcYURqu-M2QCsutypkHrCS8ihV08eCr5nKSQn3ifrECej8w"/>
+<img class="w-10 h-10 rounded-full border-2 border-background object-cover" data-alt="A close-up portrait of a cheerful man in his late 20s, featuring warm ambient lighting that highlights a modern, minimalist vibe. The background is softly blurred to maintain focus on the person, fitting a high-precision, tech-focused design system with a clean and sophisticated feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYji2XMI9pASgVB2u9zB9YhwxCfPi0Gt5hC5YJQtNU1lh-UGkEZjTOqqvY85-CWYKIdbqsMiiFV9Wd9zy0oZJeQc9VIIbenKuI71g387rals5gyHFg0woJpZiCrijJ-rhm1amrYC1zjhTh-FbKJu598NEaIHjMDbVNwGaLZjP3b4pK1JCYFf8G2duaFO8caS7jzQwAfFYD89agjKA77GHbLKrDGaBu3heVKd9D-e7gQd8Ga8VXFWy35LIO7ESFsmFUP_CTilEqdw"/>
+<div class="w-10 h-10 rounded-full border-2 border-background bg-secondary flex items-center justify-center text-[10px] text-white font-bold font-mono-ui">12k+</div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                            Trusted by 12,000+ hungry techies worldwide.
+                        </p>
+</div>
+</div>
+<!-- Right: Food Bento Collage -->
+<div class="relative grid grid-cols-2 gap-4 lg:grid-cols-12 lg:h-[600px]">
+<!-- Main Image (Bento 1) -->
+<div class="lg:col-span-8 lg:row-span-8 bg-white rounded-3xl overflow-hidden shadow-xl floating-bento" style="animation-delay: 0s;">
+<img class="w-full h-full object-cover" data-alt="A top-down close-up shot of a gourmet salmon salad bowl with fresh greens, avocado, and vibrant seeds. The lighting is bright and crisp, highlighting the textures and colors of the fresh ingredients. The image has a clean, high-end food photography style that fits a modern minimalist UI with premium aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnHNjm7Q-Aoam671LYa2JdCQXSyClIAt0rXIqbR_JnvusijSdZefVAsIOMLz6BBG-UXTAIBio8NQ_55vm0jIz0lrdnwOjBxauPrhm8KUSlXyGnImxWTdjjMpIIe01a1FyQBhpz9CdbZin9s_m6zZdWMVtnwNQF2CF9_C7JkIP-UHjr8zyJlKEWWqPtMLwHUf1uuCDqz-6VR6SlXmckI3JU_ZoGhh01K30OFNkEe5Arr-pyaC3U2Puw-tBs93gdwcPUeKYInAmo3A"/>
+<div class="absolute bottom-4 left-4 right-4 glass-card p-4 rounded-2xl flex items-center justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-primary">AI Recommends</p>
+<p class="font-headline-md text-headline-md text-text-primary">Zen Salmon Bowl</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</div>
+</div>
+</div>
+<!-- Secondary Image (Bento 2) -->
+<div class="lg:col-span-4 lg:row-span-4 bg-white rounded-3xl overflow-hidden shadow-lg floating-bento" style="animation-delay: 1s;">
+<img class="w-full h-full object-cover" data-alt="A stylized, overhead shot of a premium burger and artisanal fries served on a minimalist white plate. The setting is clean and high-contrast, with soft shadows and warm lighting that enhances the golden textures of the bun. The aesthetic is modern startup luxury, emphasizing speed and quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiYqo6CzZODYlBg_yMBuEU0STf8utE968rCzuYNLnW3NOfxeFg76KVvnjSlq0f9htgjfkzciVKPc8IQ_lCXZMP4NGTublmltgbwAlUItvYA4otY5ggTS2e3cUPwfSNZ4TZ1gqWZk8gtdHu9aVu4fIkIlBsAnJyf9CNaLjdHfbmOOzCnagFxG8bNQdphF0miy7VPIjEdbmNeWF-9l5sc1Y7kZANYdZeUjnARKYRvHtsNXIB2mzmZmlUuDpioPvIyKVlkdzXrb3kag"/>
+</div>
+<!-- Floating Status (Bento 3) -->
+<div class="hidden lg:flex lg:col-span-4 lg:row-span-4 glass-card rounded-3xl flex-col items-center justify-center p-6 text-center space-y-2 floating-bento" style="animation-delay: 2s;">
+<div class="w-12 h-12 rounded-full bg-success/10 flex items-center justify-center text-success mb-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<p class="font-headline-md text-headline-md text-text-primary">98% Match</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Biometric Sync</p>
+</div>
+<!-- Small Accent (Bento 4) -->
+<div class="lg:col-span-12 lg:row-span-4 bg-white rounded-3xl overflow-hidden shadow-lg floating-bento" style="animation-delay: 1.5s;">
+<div class="h-full w-full flex items-center p-4 gap-4">
+<img class="w-20 h-20 rounded-2xl object-cover" data-alt="A detailed, vibrant close-up of a rustic pizza slice with melting cheese and fresh basil leaves. The lighting is focused and warm, capturing the steam and crispy texture of the crust. The image follows a high-end editorial food style, perfect for a modern startup landing page." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb1PtrGVHiNbtWWucbP5xvQX5DUAvDo2CqKGTFe3XwsclJ1YFca-1n1CSCtGqNtasxSOsygBG2eP3Qlu071HWsjCeYARdPID8s6sqUm_YOmfGjjL3Jhe5OjgLli8C167MBEgtsEChZT-N9CMAGGeaEqoJD7n9QFpm1N4BcIpAvjV1-UOBZwqGeObQSnH3-3891JSmP7GUeKVL9LPnyXKDKNFw04d1Neplh9OjU2Cj3Nhjc3l7MSgwP6fgQT8khkzb1E-qyZ-MyUA"/>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<span class="font-bold text-text-primary">Analyzing Craving...</span>
+<span class="text-xs font-mono-ui text-primary">LIVE ENGINE</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2">
+<div class="bg-primary h-full rounded-full w-3/4 animate-pulse"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Background Decorative Elements -->
+<div class="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-primary/5 rounded-full blur-[100px] -z-10"></div>
+<div class="absolute bottom-0 right-1/4 w-96 h-96 bg-ai-glow/5 rounded-full blur-[120px] -z-10"></div>
+</section>
+<!-- Dynamic Experience Section -->
+<section class="bg-surface-container-low py-24 px-margin-mobile">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="glass-card p-8 rounded-3xl border-0 hover:scale-[1.02] transition-transform cursor-pointer">
+<div class="w-12 h-12 rounded-2xl bg-primary-container/20 flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-2xl">neurology</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary mb-3">Neural Taste-Mapping</h3>
+<p class="font-body-md text-body-md text-text-secondary">We sync with your health data and local weather to suggest meals that optimize your cognitive performance.</p>
+</div>
+<div class="glass-card p-8 rounded-3xl border-0 hover:scale-[1.02] transition-transform cursor-pointer">
+<div class="w-12 h-12 rounded-2xl bg-ai-glow/10 flex items-center justify-center text-ai-glow mb-6">
+<span class="material-symbols-outlined text-2xl">bolt</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary mb-3">Instant Prep-Sync</h3>
+<p class="font-body-md text-body-md text-text-secondary">Orders are timed perfectly so they arrive exactly when your next meeting ends. Zero wait time, maximum heat.</p>
+</div>
+<div class="glass-card p-8 rounded-3xl border-0 hover:scale-[1.02] transition-transform cursor-pointer">
+<div class="w-12 h-12 rounded-2xl bg-tertiary/10 flex items-center justify-center text-tertiary mb-6">
+<span class="material-symbols-outlined text-2xl">eco</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary mb-3">Cradle-to-Table</h3>
+<p class="font-body-md text-body-md text-text-secondary">AI optimizes logistics to reduce carbon footprint by 40%, choosing the most sustainable route and packaging.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface/90 dark:bg-surface-container-highest/90 backdrop-blur-lg border-t border-border-subtle dark:border-outline-variant shadow-[0_-4px_12px_rgba(0,0,0,0.05)] rounded-t-xl">
+<div class="flex flex-col items-center justify-center text-primary font-bold scale-110 animate-pulse-subtle">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-sm text-label-sm">Search</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-label-sm text-label-sm">AI Suggest</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-sm text-label-sm">Orders</span>
+</div>
+</nav>
+<footer class="bg-surface py-12 px-margin-mobile border-t border-border-subtle hidden md:block">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 bg-primary rounded-md flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xs" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+<span class="font-bold text-primary tracking-tighter">QuickBite</span>
+</div>
+<div class="flex gap-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Partners</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Career</a>
+</div>
+<div class="text-on-surface-variant font-mono-ui text-[12px]">
+                © 2026 QUICKBITE NEURAL NETWORKS
+            </div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for button hover effects
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.style.transform = 'translateY(-2px)';
+            });
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = 'translateY(0px)';
+            });
+        });
+
+        // AI Thinking Simulation
+        setInterval(() => {
+            const analyzer = document.querySelector('.animate-pulse');
+            if (analyzer) {
+                const randomWidth = Math.floor(Math.random() * 40) + 60;
+                analyzer.style.width = randomWidth + '%';
+            }
+        }, 2000);
+    </script>
+</body></html>

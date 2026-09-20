@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QuickBite Partner Dashboard</title>
+<link rel="stylesheet" href="../style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 231, 235, 0.5);
+        }
+        .chart-gradient {
+            background: linear-gradient(180deg, rgba(255, 107, 53, 0.1) 0%, rgba(255, 107, 53, 0) 100%);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen">
+<!-- SideNavBar Shell -->
+<aside class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 bg-surface-container-low dark:bg-inverse-surface border-r border-border-subtle dark:border-outline z-50 transition-all duration-300">
+<div class="px-6 py-8">
+<span class="font-display-lg text-headline-md font-black text-primary tracking-tighter">QuickBite</span>
+<div class="mt-8 flex items-center gap-3">
+<img alt="Restaurant Owner" class="w-10 h-10 rounded-full object-cover border-2 border-primary-fixed" data-alt="A professional headshot of a restaurant chef wearing clean white culinary attire, set against a blurred high-end kitchen background with warm amber lighting. The style is modern and premium, reflecting a successful business owner identity within the QuickBite ecosystem." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3TsUcITJrFh11izERt-bDGHBqnBNFShNTDhK9y1zJyhbEzWE0lJ8fqUu-mc14XBv3tC8Qb8JikjTewasrsmEk9vsyaqb0cq0Nx0Wo4aEYFRBbZNbvE3BdXKht8SSI5-N7htlfNRR0FYANJiObVwYy_NUccRoVkZJqBDYDulJvCIlIotmXurgGtQV4FAkIH3BA0kO8lKu_TG6NQTwEe2cLf_nJjyhgEYPrUsyBBtFSMoqaJpMAKOxyp562WDfei0EuX1tbFLsNVw"/>
+<div>
+<p class="font-label-sm text-label-sm font-bold text-on-surface">QuickBite Partner</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-wider">Patna Branch</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1 mt-4">
+<!-- Active: Dashboard -->
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-xl mx-2 font-bold translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-sm text-label-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-secondary-container hover:bg-surface-variant rounded-xl mx-2 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-label-sm text-label-sm">Menu</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-secondary-container hover:bg-surface-variant rounded-xl mx-2 transition-all duration-200 relative" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="font-label-sm text-label-sm">Orders</span>
+<span class="absolute right-4 w-2 h-2 bg-primary rounded-full"></span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-secondary-container hover:bg-surface-variant rounded-xl mx-2 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span class="font-label-sm text-label-sm">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-secondary-container hover:bg-surface-variant rounded-xl mx-2 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</a>
+</nav>
+<div class="p-4 bg-primary-fixed/30 m-4 rounded-2xl">
+<button class="w-full bg-primary text-on-primary py-2.5 rounded-xl font-bold text-label-sm shadow-sm hover:scale-[1.02] active:scale-95 transition-all">
+                Go Online
+            </button>
+</div>
+<div class="mt-auto border-t border-border-subtle p-2">
+<a class="flex items-center gap-3 px-4 py-3 text-on-secondary-container hover:bg-surface-variant rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-label-sm text-label-sm">Help</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-error hover:bg-error-container/20 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-label-sm text-label-sm">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 p-6 md:p-10 pb-24 md:pb-10">
+<!-- Header Controls -->
+<header class="flex flex-col md:flex-row md:items-center justify-between mb-10 gap-6">
+<div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-headline-md font-bold text-on-surface">Store Overview</h1>
+<p class="text-on-surface-variant font-body-md">Good morning! Your store is currently <span class="text-success font-bold">Open</span>.</p>
+</div>
+<div class="flex items-center gap-4 bg-white p-2 rounded-2xl border border-border-subtle shadow-sm">
+<span class="text-label-sm font-bold pl-4 pr-2">Store Status</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-14 h-8 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-success"></div>
+</label>
+</div>
+</header>
+<!-- KPI Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+<!-- Revenue KPI -->
+<div class="bg-white p-6 rounded-3xl border border-border-subtle shadow-sm group hover:border-primary/30 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-primary-fixed rounded-2xl text-primary">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</div>
+<span class="text-success text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="trending_up">trending_up</span> 12.5%
+                    </span>
+</div>
+<p class="text-on-surface-variant font-label-sm uppercase tracking-wider">Revenue</p>
+<h2 class="font-display-lg text-headline-md font-black mt-1">$12,450.80</h2>
+<div class="mt-4 h-1 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-3/4"></div>
+</div>
+</div>
+<!-- Pending Orders KPI -->
+<div class="bg-white p-6 rounded-3xl border border-border-subtle shadow-sm group hover:border-primary/30 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-secondary-container rounded-2xl text-secondary">
+<span class="material-symbols-outlined" data-icon="pending_actions">pending_actions</span>
+</div>
+<span class="text-on-surface-variant text-label-sm font-bold">Today</span>
+</div>
+<p class="text-on-surface-variant font-label-sm uppercase tracking-wider">Pending Orders</p>
+<h2 class="font-display-lg text-headline-md font-black mt-1">18</h2>
+<div class="mt-4 flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container-highest flex items-center justify-center text-[10px] font-bold">JB</div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-primary-fixed flex items-center justify-center text-[10px] font-bold text-primary">RK</div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-secondary-fixed flex items-center justify-center text-[10px] font-bold">+16</div>
+</div>
+</div>
+<!-- Total Orders KPI -->
+<div class="bg-white p-6 rounded-3xl border border-border-subtle shadow-sm group hover:border-primary/30 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-tertiary-fixed rounded-2xl text-tertiary">
+<span class="material-symbols-outlined" data-icon="local_mall">local_mall</span>
+</div>
+<span class="text-error text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="trending_down">trending_down</span> 3%
+                    </span>
+</div>
+<p class="text-on-surface-variant font-label-sm uppercase tracking-wider">Total Orders</p>
+<h2 class="font-display-lg text-headline-md font-black mt-1">1,240</h2>
+<p class="text-[12px] text-on-surface-variant mt-4">Average 42 orders / day</p>
+</div>
+</div>
+<!-- Charts & Recent Activity Section -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Main Sales Chart -->
+<div class="lg:col-span-2 bg-white p-8 rounded-3xl border border-border-subtle shadow-sm">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-headline-md text-on-surface font-bold">Sales Trend</h3>
+<div class="flex gap-2">
+<button class="px-4 py-1.5 rounded-full text-label-sm font-bold bg-surface-container-high text-on-surface border border-border-subtle">Week</button>
+<button class="px-4 py-1.5 rounded-full text-label-sm font-bold bg-primary text-white">Month</button>
+</div>
+</div>
+<!-- Mock Chart Visualization -->
+<div class="relative h-64 w-full flex items-end justify-between px-2">
+<div class="absolute inset-0 chart-gradient rounded-b-xl opacity-30"></div>
+<div class="w-8 bg-primary/20 rounded-t-lg h-[40%] transition-all hover:bg-primary/40"></div>
+<div class="w-8 bg-primary/20 rounded-t-lg h-[60%] transition-all hover:bg-primary/40"></div>
+<div class="w-8 bg-primary/20 rounded-t-lg h-[45%] transition-all hover:bg-primary/40"></div>
+<div class="w-8 bg-primary/20 rounded-t-lg h-[75%] transition-all hover:bg-primary/40"></div>
+<div class="w-8 bg-primary rounded-t-lg h-[90%] transition-all shadow-[0_-4px_10px_rgba(171,53,0,0.2)]"></div>
+<div class="w-8 bg-primary/20 rounded-t-lg h-[65%] transition-all hover:bg-primary/40"></div>
+<div class="w-8 bg-primary/20 rounded-t-lg h-[55%] transition-all hover:bg-primary/40"></div>
+<div class="w-8 bg-primary/20 rounded-t-lg h-[80%] transition-all hover:bg-primary/40"></div>
+</div>
+<div class="flex justify-between mt-4 px-2 text-on-surface-variant font-mono-ui text-[10px] uppercase tracking-widest">
+<span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span><span>Mon</span>
+</div>
+</div>
+<!-- Recent Orders Feed -->
+<div class="bg-white rounded-3xl border border-border-subtle shadow-sm overflow-hidden flex flex-col">
+<div class="p-6 border-b border-border-subtle flex justify-between items-center">
+<h3 class="font-label-sm text-on-surface font-bold uppercase tracking-wider">Recent Orders</h3>
+<span class="px-2 py-0.5 bg-primary-fixed text-primary text-[10px] font-bold rounded-full animate-pulse">LIVE</span>
+</div>
+<div class="flex-1 overflow-y-auto max-h-[400px] p-2">
+<!-- Order Item -->
+<div class="p-4 hover:bg-surface-container-low rounded-2xl transition-all cursor-pointer border border-transparent hover:border-border-subtle mb-1">
+<div class="flex justify-between items-start mb-2">
+<span class="font-mono-ui text-label-sm text-primary">#QB-8291</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-success/10 text-success font-bold uppercase">Preparing</span>
+</div>
+<p class="font-label-sm text-on-surface">2x Spicy Chicken Zinger, 1x Coke Large</p>
+<div class="flex justify-between items-center mt-3">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest"></div>
+<span class="text-[12px] font-medium">Rahul K.</span>
+</div>
+<span class="text-[12px] text-on-surface-variant">2 mins ago</span>
+</div>
+</div>
+<!-- Order Item -->
+<div class="p-4 hover:bg-surface-container-low rounded-2xl transition-all cursor-pointer border border-transparent hover:border-border-subtle mb-1">
+<div class="flex justify-between items-start mb-2">
+<span class="font-mono-ui text-label-sm text-primary">#QB-8289</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-tertiary-container/10 text-tertiary font-bold uppercase">Pickup</span>
+</div>
+<p class="font-label-sm text-on-surface">1x Paneer Tikka Bowl, 2x Garlic Naan</p>
+<div class="flex justify-between items-center mt-3">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest"></div>
+<span class="text-[12px] font-medium">Anjali S.</span>
+</div>
+<span class="text-[12px] text-on-surface-variant">8 mins ago</span>
+</div>
+</div>
+<!-- Order Item -->
+<div class="p-4 hover:bg-surface-container-low rounded-2xl transition-all cursor-pointer border border-transparent hover:border-border-subtle">
+<div class="flex justify-between items-start mb-2">
+<span class="font-mono-ui text-label-sm text-primary">#QB-8285</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-bold uppercase">Completed</span>
+</div>
+<p class="font-label-sm text-on-surface">3x Veggie Supreme Pizza (Med)</p>
+<div class="flex justify-between items-center mt-3">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest"></div>
+<span class="text-[12px] font-medium">Sumit V.</span>
+</div>
+<span class="text-[12px] text-on-surface-variant">15 mins ago</span>
+</div>
+</div>
+</div>
+<button class="w-full py-4 text-center font-bold text-label-sm text-primary hover:bg-primary-fixed/20 transition-all border-t border-border-subtle">
+                    View All Orders
+                </button>
+</div>
+</div>
+<!-- Floating AI Insights Card -->
+<div class="mt-10 glass p-6 rounded-3xl border-2 border-primary/10 flex flex-col md:flex-row items-center gap-6">
+<div class="w-16 h-16 bg-primary-container rounded-2xl flex items-center justify-center text-on-primary-container shrink-0">
+<span class="material-symbols-outlined text-[32px]" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-primary font-label-sm uppercase tracking-widest">AI Suggest</h4>
+<p class="text-body-md text-on-surface">Based on local trends, your <span class="font-bold">"Spicy Chicken"</span> items are peaking. Consider adding a 'Combo Deal' for lunch hours to increase average order value by ~15%.</p>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-3 rounded-2xl font-bold hover:scale-105 active:scale-95 transition-all shrink-0">
+                Apply Suggestion
+            </button>
+</div>
+</main>
+<!-- BottomNavBar for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface/90 backdrop-blur-lg border-t border-border-subtle shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-primary font-bold scale-110" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label-sm text-[10px]">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-label-sm text-[10px]">AI Suggest</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-label-sm text-[10px]">Orders</span>
+</a>
+</nav>
+<!-- Dynamic micro-interactions -->
+<script>
+        document.querySelectorAll('a, button').forEach(elem => {
+            elem.addEventListener('mousedown', () => {
+                elem.classList.add('scale-95');
+            });
+            elem.addEventListener('mouseup', () => {
+                elem.classList.remove('scale-95');
+            });
+            elem.addEventListener('mouseleave', () => {
+                elem.classList.remove('scale-95');
+            });
+        });
+
+        // Simulating Live Feed Update
+        setInterval(() => {
+            const feed = document.querySelector('.overflow-y-auto');
+            const items = feed.querySelectorAll('.p-4');
+            if(items.length > 0) {
+                const first = items[0];
+                first.classList.add('bg-primary-fixed/20');
+                setTimeout(() => first.classList.remove('bg-primary-fixed/20'), 1000);
+            }
+        }, 8000);
+    </script>
+</body></html>
