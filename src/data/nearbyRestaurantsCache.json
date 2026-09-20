@@ -1,0 +1,1058 @@
+[
+  {
+    "type": "Feature",
+    "properties": {
+      "name": "patnights",
+      "country": "India",
+      "country_code": "in",
+      "state": "Bihar",
+      "county": "Patna Rural",
+      "state_district": "Patna",
+      "city": "Patna",
+      "postcode": "800027",
+      "suburb": "Rajendra Nagar",
+      "street": "road 14b",
+      "iso3166_2": "IN-BR",
+      "lon": 85.1496475,
+      "lat": 25.5859509,
+      "state_code": "BR",
+      "formatted": "patnights, road 14b, Rajendra Nagar, Patna - 800027, Bihar, India",
+      "address_line1": "patnights",
+      "address_line2": "road 14b, Rajendra Nagar, Patna - 800027, Bihar, India",
+      "categories": [
+        "catering",
+        "catering.restaurant"
+      ],
+      "details": [],
+      "datasource": {
+        "sourcename": "openstreetmap",
+        "attribution": "© OpenStreetMap contributors",
+        "license": "Open Database License",
+        "url": "https://www.openstreetmap.org/copyright",
+        "raw": {
+          "lat": 25.5859509,
+          "lon": 85.1496475,
+          "name": "patnights",
+          "osm_id": 11691582838,
+          "amenity": "restaurant",
+          "osm_type": "n"
+        }
+      },
+      "place_id": "51679b1bd39349554059d08fd0e000963940f00103f9017665dfb8020000009203097061746e6967687473"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.1496475,
+        25.5859509
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "name": "bloom's kitchen",
+      "country": "India",
+      "country_code": "in",
+      "state": "Bihar",
+      "county": "Patna Rural",
+      "state_district": "Patna",
+      "city": "Patna",
+      "postcode": "800026",
+      "suburb": "Rajendra Nagar",
+      "quarter": "RBI staff quarter",
+      "street": "Kanti Factory Road",
+      "iso3166_2": "IN-BR",
+      "lon": 85.1681312,
+      "lat": 25.5898193,
+      "state_code": "BR",
+      "formatted": "bloom's kitchen, Kanti Factory Road, Rajendra Nagar, Patna - 800026, Bihar, India",
+      "address_line1": "bloom's kitchen",
+      "address_line2": "Kanti Factory Road, Rajendra Nagar, Patna - 800026, Bihar, India",
+      "categories": [
+        "catering",
+        "catering.restaurant"
+      ],
+      "details": [],
+      "datasource": {
+        "sourcename": "openstreetmap",
+        "attribution": "© OpenStreetMap contributors",
+        "license": "Open Database License",
+        "url": "https://www.openstreetmap.org/copyright",
+        "raw": {
+          "lat": 25.5898193,
+          "lon": 85.1681312,
+          "name": "bloom's kitchen",
+          "osm_id": 12596407044,
+          "amenity": "restaurant",
+          "osm_type": "n"
+        }
+      },
+      "place_id": "51fc5b5da9c24a554059b30ccc65fe963940f00103f90104ebcdee0200000092030f626c6f6f6d2773206b69746368656e"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.1681312,
+        25.5898193
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "name": "Chicago Pizza",
+      "country": "India",
+      "country_code": "in",
+      "state": "Bihar",
+      "county": "Patna Rural",
+      "state_district": "Patna",
+      "city": "Patna",
+      "postcode": "800026",
+      "suburb": "Rajendra Nagar",
+      "quarter": "RBI staff quarter",
+      "street": "Bhagwat Nagar Main Road",
+      "iso3166_2": "IN-BR",
+      "lon": 85.1793717,
+      "lat": 25.5894019,
+      "state_code": "BR",
+      "formatted": "Chicago Pizza, Bhagwat Nagar Main Road, Rajendra Nagar, Patna - 800026, Bihar, India",
+      "address_line1": "Chicago Pizza",
+      "address_line2": "Bhagwat Nagar Main Road, Rajendra Nagar, Patna - 800026, Bihar, India",
+      "categories": [
+        "catering",
+        "catering.restaurant",
+        "catering.restaurant.pizza"
+      ],
+      "details": [
+        "details.catering"
+      ],
+      "datasource": {
+        "sourcename": "openstreetmap",
+        "attribution": "© OpenStreetMap contributors",
+        "license": "Open Database License",
+        "url": "https://www.openstreetmap.org/copyright",
+        "raw": {
+          "lat": 25.5894019,
+          "lon": 85.1793717,
+          "name": "Chicago Pizza",
+          "osm_id": 12596010142,
+          "amenity": "restaurant",
+          "cuisine": "pizza",
+          "osm_type": "n"
+        }
+      },
+      "catering": {
+        "cuisine": "pizza"
+      },
+      "place_id": "51fd5470d37a4b55405944b3fc0ae3963940f00103f9019edcc7ee0200000092030d4368696361676f2050697a7a61"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.1793717,
+        25.5894019
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "name": "Ghar Aangan",
+      "country": "India",
+      "country_code": "in",
+      "state": "Bihar",
+      "county": "Patna Rural",
+      "state_district": "Patna",
+      "city": "Patna",
+      "postcode": "803210",
+      "street": "Buddha Marg",
+      "iso3166_2": "IN-BR",
+      "lon": 85.1335362,
+      "lat": 25.6071662,
+      "state_code": "BR",
+      "formatted": "Ghar Aangan, Buddha Marg, Patna - 803210, Bihar, India",
+      "address_line1": "Ghar Aangan",
+      "address_line2": "Buddha Marg, Patna - 803210, Bihar, India",
+      "categories": [
+        "catering",
+        "catering.restaurant"
+      ],
+      "details": [],
+      "datasource": {
+        "sourcename": "openstreetmap",
+        "attribution": "© OpenStreetMap contributors",
+        "license": "Open Database License",
+        "url": "https://www.openstreetmap.org/copyright",
+        "raw": {
+          "lat": 25.6071662,
+          "lon": 85.1335362,
+          "name": "Ghar Aangan",
+          "osm_id": 2652327564,
+          "amenity": "restaurant",
+          "osm_type": "n"
+        }
+      },
+      "place_id": "5141f56adb8b48554059923c7c3e6f9b3940f00103f9018c4e179e0000000092030b476861722041616e67616e"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.1335362,
+        25.6071662
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "name": "Tara Hospital and Medical Research Centre Pvt Ltd",
+      "country": "India",
+      "country_code": "in",
+      "state": "Bihar",
+      "county": "Patna Rural",
+      "state_district": "Patna",
+      "city": "Patna",
+      "postcode": "800001",
+      "street": "Ashok Raj Path",
+      "iso3166_2": "IN-BR",
+      "lon": 85.1379488,
+      "lat": 25.618391,
+      "state_code": "BR",
+      "formatted": "Tara Hospital and Medical Research Centre Pvt Ltd, Ashok Raj Path, Patna - 800001, Bihar, India",
+      "address_line1": "Tara Hospital and Medical Research Centre Pvt Ltd",
+      "address_line2": "Ashok Raj Path, Patna - 800001, Bihar, India",
+      "categories": [
+        "catering",
+        "catering.restaurant"
+      ],
+      "details": [],
+      "datasource": {
+        "sourcename": "openstreetmap",
+        "attribution": "© OpenStreetMap contributors",
+        "license": "Open Database License",
+        "url": "https://www.openstreetmap.org/copyright",
+        "raw": {
+          "lat": 25.618391,
+          "lon": 85.1379488,
+          "full": "B.P. Koirala Marg ( Bank Road)",
+          "name": "Tara Hospital and Medical Research Centre Pvt Ltd",
+          "state": "Bihar",
+          "osm_id": 6950588498,
+          "amenity": "restaurant",
+          "district": "Patna",
+          "osm_type": "n",
+          "postcode": 800001
+        }
+      },
+      "place_id": "5170213427d448554059072461df4e9e3940f00103f9015290499e010000009203315461726120486f73706974616c20616e64204d65646963616c2052657365617263682043656e74726520507674204c7464"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.1379488,
+        25.618391
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "name": "Orange in",
+      "country": "India",
+      "country_code": "in",
+      "state": "Bihar",
+      "county": "Patna Rural",
+      "state_district": "Patna",
+      "city": "Patna",
+      "postcode": "800016",
+      "suburb": "Rajendra Nagar",
+      "quarter": "RBI staff quarter",
+      "street": "Kumhrar Road",
+      "iso3166_2": "IN-BR",
+      "lon": 85.1649335,
+      "lat": 25.5992138,
+      "state_code": "BR",
+      "formatted": "Orange in, Kumhrar Road, Rajendra Nagar, Patna - 800016, Bihar, India",
+      "address_line1": "Orange in",
+      "address_line2": "Kumhrar Road, Rajendra Nagar, Patna - 800016, Bihar, India",
+      "categories": [
+        "building",
+        "building.catering",
+        "catering",
+        "catering.restaurant"
+      ],
+      "details": [],
+      "datasource": {
+        "sourcename": "openstreetmap",
+        "attribution": "© OpenStreetMap contributors",
+        "license": "Open Database License",
+        "url": "https://www.openstreetmap.org/copyright",
+        "raw": {
+          "lat": 25.599218068185483,
+          "lon": 85.1649291788871,
+          "name": "Orange in",
+          "osm_id": 871543806,
+          "amenity": "restaurant",
+          "building": "yes",
+          "osm_type": "w"
+        }
+      },
+      "place_id": "517b5e1d338e4a5540596907f65a66993940f00102f901feb3f233000000009203094f72616e676520696e"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.1649291788871,
+        25.599218068185483
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "name": "Swaad",
+      "country": "India",
+      "country_code": "in",
+      "state": "Bihar",
+      "county": "Patna Rural",
+      "state_district": "Patna",
+      "city": "Patna",
+      "postcode": "800001",
+      "suburb": "Rajendra Nagar",
+      "street": "ABC Play School Lane",
+      "iso3166_2": "IN-BR",
+      "lon": 85.1440539,
+      "lat": 25.6133541,
+      "state_code": "BR",
+      "formatted": "Swaad, ABC Play School Lane, Rajendra Nagar, Patna - 800001, Bihar, India",
+      "address_line1": "Swaad",
+      "address_line2": "ABC Play School Lane, Rajendra Nagar, Patna - 800001, Bihar, India",
+      "categories": [
+        "catering",
+        "catering.restaurant"
+      ],
+      "details": [],
+      "datasource": {
+        "sourcename": "openstreetmap",
+        "attribution": "© OpenStreetMap contributors",
+        "license": "Open Database License",
+        "url": "https://www.openstreetmap.org/copyright",
+        "raw": {
+          "lat": 25.6133541,
+          "lon": 85.1440539,
+          "name": "Swaad",
+          "osm_id": 6087845688,
+          "amenity": "restaurant",
+          "osm_type": "n"
+        }
+      },
+      "place_id": "511f57d92d3849554059155e38c6049d3940f00103f9013827dd6a010000009203055377616164"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.1440539,
+        25.6133541
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "name": "pour tous",
+      "country": "India",
+      "country_code": "in",
+      "state": "Bihar",
+      "county": "Patna Rural",
+      "state_district": "Patna",
+      "city": "Patna",
+      "postcode": "800013",
+      "suburb": "Digha",
+      "street": "Patliputra Kurji Road",
+      "iso3166_2": "IN-BR",
+      "lon": 85.1109341,
+      "lat": 25.6260793,
+      "state_code": "BR",
+      "formatted": "pour tous, Patliputra Kurji Road, Digha, Patna - 800013, Bihar, India",
+      "address_line1": "pour tous",
+      "address_line2": "Patliputra Kurji Road, Digha, Patna - 800013, Bihar, India",
+      "categories": [
+        "catering",
+        "catering.restaurant"
+      ],
+      "details": [],
+      "datasource": {
+        "sourcename": "openstreetmap",
+        "attribution": "© OpenStreetMap contributors",
+        "license": "Open Database License",
+        "url": "https://www.openstreetmap.org/copyright",
+        "raw": {
+          "lat": 25.6260793,
+          "lon": 85.1109341,
+          "name": "pour tous",
+          "osm_id": 10091601808,
+          "amenity": "restaurant",
+          "osm_type": "n",
+          "contact:mobile": "+91-7091208505"
+        }
+      },
+      "place_id": "51b7e0568b1947554059dc33a6bb46a03940f00103f901909f815902000000920309706f757220746f7573"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.1109341,
+        25.6260793
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "name": "The Potbelly",
+      "country": "India",
+      "country_code": "in",
+      "state": "Bihar",
+      "county": "Patna Rural",
+      "state_district": "Patna",
+      "city": "Patna",
+      "postcode": "800028",
+      "street": "Serpentine Road",
+      "iso3166_2": "IN-BR",
+      "lon": 85.1212713,
+      "lat": 25.6080015,
+      "state_code": "BR",
+      "formatted": "The Potbelly, Serpentine Road, Patna - 800028, Bihar, India",
+      "address_line1": "The Potbelly",
+      "address_line2": "Serpentine Road, Patna - 800028, Bihar, India",
+      "categories": [
+        "catering",
+        "catering.restaurant",
+        "wheelchair",
+        "wheelchair.limited"
+      ],
+      "details": [
+        "details",
+        "details.facilities"
+      ],
+      "datasource": {
+        "sourcename": "openstreetmap",
+        "attribution": "© OpenStreetMap contributors",
+        "license": "Open Database License",
+        "url": "https://www.openstreetmap.org/copyright",
+        "raw": {
+          "lat": 25.608001500406516,
+          "lon": 85.12127131665493,
+          "name": "The Potbelly",
+          "room": "restaurant",
+          "level": 0,
+          "indoor": "room",
+          "osm_id": 1370810002,
+          "amenity": "restaurant",
+          "osm_type": "w",
+          "wheelchair": "limited",
+          "opening_hours": "Tu-Su 10:00-21:30",
+          "air_conditioning": "yes"
+        }
+      },
+      "opening_hours": "Tu-Su 10:00-21:30",
+      "facilities": {
+        "wheelchair": true,
+        "wheelchair_details": {
+          "condition": "limited"
+        },
+        "air_conditioning": true
+      },
+      "place_id": "5173bec4e8c247554059382a80fca59b3940f00102f90192e6b4510000000092030c54686520506f7462656c6c79"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.12127131665493,
+        25.608001500406516
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "name": "resturant",
+      "country": "India",
+      "country_code": "in",
+      "state": "Bihar",
+      "county": "Patna Rural",
+      "state_district": "Patna",
+      "city": "Patna",
+      "postcode": "800001",
+      "street": "chiraiyantand flyover road",
+      "iso3166_2": "IN-BR",
+      "lon": 85.1417415,
+      "lat": 25.6069263,
+      "state_code": "BR",
+      "formatted": "resturant, chiraiyantand flyover road, Patna - 800001, Bihar, India",
+      "address_line1": "resturant",
+      "address_line2": "chiraiyantand flyover road, Patna - 800001, Bihar, India",
+      "categories": [
+        "catering",
+        "catering.restaurant"
+      ],
+      "details": [],
+      "datasource": {
+        "sourcename": "openstreetmap",
+        "attribution": "© OpenStreetMap contributors",
+        "license": "Open Database License",
+        "url": "https://www.openstreetmap.org/copyright",
+        "raw": {
+          "lat": 25.6069263,
+          "lon": 85.1417415,
+          "name": "resturant",
+          "osm_id": 11698385691,
+          "amenity": "restaurant",
+          "osm_type": "n"
+        }
+      },
+      "place_id": "511abff04a12495540591195a1855f9b3940f00103f9011b3347b902000000920309726573747572616e74"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.1417415,
+        25.6069263
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "name": "Meat Adda",
+      "country": "India",
+      "country_code": "in",
+      "state": "Bihar",
+      "county": "Patna Rural",
+      "state_district": "Patna",
+      "city": "Patna",
+      "postcode": "800013",
+      "suburb": "Digha",
+      "street": "Boring Patliputra Road",
+      "iso3166_2": "IN-BR",
+      "lon": 85.1054515,
+      "lat": 25.6283962,
+      "state_code": "BR",
+      "formatted": "Meat Adda, Boring Patliputra Road, Digha, Patna - 800013, Bihar, India",
+      "address_line1": "Meat Adda",
+      "address_line2": "Boring Patliputra Road, Digha, Patna - 800013, Bihar, India",
+      "categories": [
+        "catering",
+        "catering.restaurant"
+      ],
+      "details": [],
+      "datasource": {
+        "sourcename": "openstreetmap",
+        "attribution": "© OpenStreetMap contributors",
+        "license": "Open Database License",
+        "url": "https://www.openstreetmap.org/copyright",
+        "raw": {
+          "lat": 25.6283962,
+          "lon": 85.1054515,
+          "name": "Meat Adda",
+          "osm_id": 10053499925,
+          "amenity": "restaurant",
+          "osm_type": "n"
+        }
+      },
+      "place_id": "511bf4a5b7bf4655405941eec792dea03940f00103f901153c3c57020000009203094d6561742041646461"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.1054515,
+        25.6283962
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "name": "Basant bahar",
+      "country": "India",
+      "country_code": "in",
+      "state": "Bihar",
+      "county": "Patna Rural",
+      "state_district": "Patna",
+      "city": "Patna",
+      "postcode": "800020",
+      "suburb": "Rajendra Nagar",
+      "street": "shavji park",
+      "iso3166_2": "IN-BR",
+      "lon": 85.149634,
+      "lat": 25.5918101,
+      "state_code": "BR",
+      "formatted": "Basant bahar, shavji park, Rajendra Nagar, Patna - 800020, Bihar, India",
+      "address_line1": "Basant bahar",
+      "address_line2": "shavji park, Rajendra Nagar, Patna - 800020, Bihar, India",
+      "categories": [
+        "catering",
+        "catering.restaurant"
+      ],
+      "details": [],
+      "datasource": {
+        "sourcename": "openstreetmap",
+        "attribution": "© OpenStreetMap contributors",
+        "license": "Open Database License",
+        "url": "https://www.openstreetmap.org/copyright",
+        "raw": {
+          "lat": 25.5918101,
+          "lon": 85.149634,
+          "name": "Basant bahar",
+          "osm_id": 11691666023,
+          "amenity": "restaurant",
+          "osm_type": "n"
+        }
+      },
+      "place_id": "51a9177c9a934955405947f1e0dd80973940f00103f90167aae0b80200000092030c426173616e74206261686172"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.149634,
+        25.5918101
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "name": "Express Inn Family Restaurant",
+      "country": "India",
+      "country_code": "in",
+      "state": "Bihar",
+      "county": "Patna Rural",
+      "state_district": "Patna",
+      "city": "Patna",
+      "postcode": "803210",
+      "street": "Station Road",
+      "iso3166_2": "IN-BR",
+      "lon": 85.1378461,
+      "lat": 25.6035496,
+      "state_code": "BR",
+      "formatted": "Express Inn Family Restaurant, Station Road, Patna - 803210, Bihar, India",
+      "address_line1": "Express Inn Family Restaurant",
+      "address_line2": "Station Road, Patna - 803210, Bihar, India",
+      "categories": [
+        "catering",
+        "catering.restaurant"
+      ],
+      "details": [
+        "details"
+      ],
+      "datasource": {
+        "sourcename": "openstreetmap",
+        "attribution": "© OpenStreetMap contributors",
+        "license": "Open Database License",
+        "url": "https://www.openstreetmap.org/copyright",
+        "raw": {
+          "lat": 25.6035496,
+          "lon": 85.1378461,
+          "name": "Express Inn Family Restaurant",
+          "osm_id": 6087845691,
+          "amenity": "restaurant",
+          "osm_type": "n",
+          "opening_hours": "24/7"
+        }
+      },
+      "opening_hours": "24/7",
+      "place_id": "5165d87278d2485540598e83013a829a3940f00103f9013b27dd6a0100000092031d4578707265737320496e6e2046616d696c792052657374617572616e74"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.1378461,
+        25.6035496
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "name": "karim's",
+      "country": "India",
+      "country_code": "in",
+      "state": "Bihar",
+      "county": "Patna Rural",
+      "state_district": "Patna",
+      "city": "Patna",
+      "postcode": "800001",
+      "suburb": "Rajendra Nagar",
+      "street": "South Gandhi Maidan Marg",
+      "iso3166_2": "IN-BR",
+      "lon": 85.1473461,
+      "lat": 25.6142886,
+      "state_code": "BR",
+      "formatted": "karim's, South Gandhi Maidan Marg, Rajendra Nagar, Patna - 800001, Bihar, India",
+      "address_line1": "karim's",
+      "address_line2": "South Gandhi Maidan Marg, Rajendra Nagar, Patna - 800001, Bihar, India",
+      "categories": [
+        "catering",
+        "catering.restaurant"
+      ],
+      "details": [],
+      "datasource": {
+        "sourcename": "openstreetmap",
+        "attribution": "© OpenStreetMap contributors",
+        "license": "Open Database License",
+        "url": "https://www.openstreetmap.org/copyright",
+        "raw": {
+          "lat": 25.6142886,
+          "lon": 85.1473461,
+          "name": "karim's",
+          "osm_id": 13592941949,
+          "amenity": "restaurant",
+          "osm_type": "n"
+        }
+      },
+      "place_id": "515c2c561e6e495540593d4e8704429d3940f00103f9017dd5332a030000009203076b6172696d2773"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.1473461,
+        25.6142886
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "name": "Dangerously Rolls",
+      "country": "India",
+      "country_code": "in",
+      "state": "Bihar",
+      "county": "Patna Rural",
+      "state_district": "Patna",
+      "city": "Patna",
+      "postcode": "800023",
+      "street": "Santushti lane",
+      "iso3166_2": "IN-BR",
+      "lon": 85.116464,
+      "lat": 25.6115455,
+      "state_code": "BR",
+      "formatted": "Dangerously Rolls, Santushti lane, Patna - 800023, Bihar, India",
+      "address_line1": "Dangerously Rolls",
+      "address_line2": "Santushti lane, Patna - 800023, Bihar, India",
+      "categories": [
+        "building",
+        "building.catering",
+        "catering",
+        "catering.restaurant"
+      ],
+      "details": [
+        "details.catering"
+      ],
+      "datasource": {
+        "sourcename": "openstreetmap",
+        "attribution": "© OpenStreetMap contributors",
+        "license": "Open Database License",
+        "url": "https://www.openstreetmap.org/copyright",
+        "raw": {
+          "lat": 25.611542297100357,
+          "lon": 85.1164639274931,
+          "name": "Dangerously Rolls",
+          "osm_id": 1107287383,
+          "amenity": "restaurant",
+          "cuisine": "rolls",
+          "building": "yes",
+          "osm_type": "w"
+        }
+      },
+      "catering": {
+        "cuisine": "rolls"
+      },
+      "place_id": "51c8ef1d257447554059b02a36098e9c3940f00102f90157ddff410000000092031144616e6765726f75736c7920526f6c6c73"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.1164639274931,
+        25.611542297100357
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "name": "kathi Junction Fast Food",
+      "country": "India",
+      "country_code": "in",
+      "state": "Bihar",
+      "county": "Patna Rural",
+      "state_district": "Patna",
+      "city": "Patna",
+      "postcode": "800020",
+      "suburb": "Rajendra Nagar",
+      "street": "J-sector Road",
+      "iso3166_2": "IN-BR",
+      "lon": 85.1501944,
+      "lat": 25.5906549,
+      "state_code": "BR",
+      "formatted": "kathi Junction Fast Food, J-sector Road, Rajendra Nagar, Patna - 800020, Bihar, India",
+      "address_line1": "kathi Junction Fast Food",
+      "address_line2": "J-sector Road, Rajendra Nagar, Patna - 800020, Bihar, India",
+      "categories": [
+        "catering",
+        "catering.restaurant"
+      ],
+      "details": [],
+      "datasource": {
+        "sourcename": "openstreetmap",
+        "attribution": "© OpenStreetMap contributors",
+        "license": "Open Database License",
+        "url": "https://www.openstreetmap.org/copyright",
+        "raw": {
+          "lat": 25.5906549,
+          "lon": 85.1501944,
+          "name": "kathi Junction Fast Food",
+          "osm_id": 11691636792,
+          "amenity": "restaurant",
+          "osm_type": "n"
+        }
+      },
+      "place_id": "51b602f9c89c49554059dfb8d62835973940f00103f9013838e0b8020000009203186b61746869204a756e6374696f6e204661737420466f6f64"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.1501944,
+        25.5906549
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "name": "Kabab Mahal",
+      "country": "India",
+      "country_code": "in",
+      "state": "Bihar",
+      "county": "Patna Rural",
+      "state_district": "Patna",
+      "city": "Patna",
+      "postcode": "800020",
+      "suburb": "Rajendra Nagar",
+      "quarter": "RBI staff quarter",
+      "street": "Kankarbagh Marg",
+      "iso3166_2": "IN-BR",
+      "lon": 85.1553593,
+      "lat": 25.5998876,
+      "state_code": "BR",
+      "formatted": "Kabab Mahal, Kankarbagh Marg, Rajendra Nagar, Patna - 800020, Bihar, India",
+      "address_line1": "Kabab Mahal",
+      "address_line2": "Kankarbagh Marg, Rajendra Nagar, Patna - 800020, Bihar, India",
+      "categories": [
+        "catering",
+        "catering.restaurant",
+        "catering.restaurant.asian"
+      ],
+      "details": [
+        "details.catering"
+      ],
+      "datasource": {
+        "sourcename": "openstreetmap",
+        "attribution": "© OpenStreetMap contributors",
+        "license": "Open Database License",
+        "url": "https://www.openstreetmap.org/copyright",
+        "raw": {
+          "lat": 25.5998876,
+          "lon": 85.1553593,
+          "name": "Kabab Mahal",
+          "osm_id": 8118015730,
+          "amenity": "restaurant",
+          "cuisine": "asian",
+          "osm_type": "n"
+        }
+      },
+      "catering": {
+        "cuisine": "asian"
+      },
+      "place_id": "5149282268f149554059a346d73b92993940f00103f901f216dfe30100000092030b4b61626162204d6168616c"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.1553593,
+        25.5998876
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "name": "Berco's",
+      "country": "India",
+      "country_code": "in",
+      "state": "Bihar",
+      "county": "Patna Rural",
+      "state_district": "Patna",
+      "city": "Patna",
+      "postcode": "800001",
+      "suburb": "Rajendra Nagar",
+      "street": "East Gandhi Maidan Marg",
+      "iso3166_2": "IN-BR",
+      "lon": 85.1487359,
+      "lat": 25.6169975,
+      "state_code": "BR",
+      "formatted": "Berco's, East Gandhi Maidan Marg, Rajendra Nagar, Patna - 800001, Bihar, India",
+      "address_line1": "Berco's",
+      "address_line2": "East Gandhi Maidan Marg, Rajendra Nagar, Patna - 800001, Bihar, India",
+      "categories": [
+        "catering",
+        "catering.restaurant",
+        "catering.restaurant.chinese",
+        "catering.restaurant.thai"
+      ],
+      "details": [
+        "details.catering"
+      ],
+      "datasource": {
+        "sourcename": "openstreetmap",
+        "attribution": "© OpenStreetMap contributors",
+        "license": "Open Database License",
+        "url": "https://www.openstreetmap.org/copyright",
+        "raw": {
+          "lat": 25.6169975,
+          "lon": 85.1487359,
+          "name": "Berco's",
+          "level": 3,
+          "osm_id": 7205351120,
+          "amenity": "restaurant",
+          "cuisine": "chinese;thai",
+          "osm_type": "n"
+        }
+      },
+      "catering": {
+        "cuisine": "chinese;thai"
+      },
+      "place_id": "516f8f94e38449554059b936548cf39d3940f00103f901d0ee78ad01000000920307426572636f2773"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.1487359,
+        25.6169975
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "name": "Sagar Ratna",
+      "country": "India",
+      "country_code": "in",
+      "state": "Bihar",
+      "county": "Patna Rural",
+      "state_district": "Patna",
+      "city": "Patna",
+      "postcode": "800001",
+      "suburb": "Rajendra Nagar",
+      "street": "East Gandhi Maidan Marg",
+      "iso3166_2": "IN-BR",
+      "lon": 85.1486952,
+      "lat": 25.6178688,
+      "state_code": "BR",
+      "formatted": "Sagar Ratna, East Gandhi Maidan Marg, Rajendra Nagar, Patna - 800001, Bihar, India",
+      "address_line1": "Sagar Ratna",
+      "address_line2": "East Gandhi Maidan Marg, Rajendra Nagar, Patna - 800001, Bihar, India",
+      "categories": [
+        "catering",
+        "catering.restaurant"
+      ],
+      "details": [
+        "details",
+        "details.catering",
+        "details.facilities"
+      ],
+      "datasource": {
+        "sourcename": "openstreetmap",
+        "attribution": "© OpenStreetMap contributors",
+        "license": "Open Database License",
+        "url": "https://www.openstreetmap.org/copyright",
+        "raw": {
+          "lat": 25.6178688,
+          "lon": 85.1486952,
+          "name": "Sagar Ratna",
+          "level": 1,
+          "osm_id": 7205312994,
+          "amenity": "restaurant",
+          "cuisine": "north_indian;south_indian;chinese",
+          "osm_type": "n",
+          "wheelchair": "no",
+          "opening_hours": "Mo-Su 11:00-22:30"
+        }
+      },
+      "opening_hours": "Mo-Su 11:00-22:30",
+      "facilities": {
+        "wheelchair": false
+      },
+      "catering": {
+        "cuisine": "north_indian;south_indian;chinese"
+      },
+      "place_id": "519f44df388449554059013851a62c9e3940f00103f901e25978ad0100000092030b5361676172205261746e61"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.1486952,
+        25.6178688
+      ]
+    }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+      "name": "cafe diner",
+      "country": "India",
+      "country_code": "in",
+      "state": "Bihar",
+      "county": "Patna Rural",
+      "state_district": "Patna",
+      "city": "Patna",
+      "postcode": "800027",
+      "suburb": "Rajendra Nagar",
+      "street": "road 14b",
+      "iso3166_2": "IN-BR",
+      "lon": 85.1497443,
+      "lat": 25.5876025,
+      "state_code": "BR",
+      "formatted": "cafe diner, road 14b, Rajendra Nagar, Patna - 800027, Bihar, India",
+      "address_line1": "cafe diner",
+      "address_line2": "road 14b, Rajendra Nagar, Patna - 800027, Bihar, India",
+      "categories": [
+        "catering",
+        "catering.restaurant"
+      ],
+      "details": [],
+      "datasource": {
+        "sourcename": "openstreetmap",
+        "attribution": "© OpenStreetMap contributors",
+        "license": "Open Database License",
+        "url": "https://www.openstreetmap.org/copyright",
+        "raw": {
+          "lat": 25.5876025,
+          "lon": 85.1497443,
+          "name": "cafe diner",
+          "osm_id": 11691612627,
+          "amenity": "restaurant",
+          "osm_type": "n"
+        }
+      },
+      "place_id": "51cbd01d6995495540593f8c101e6d963940f00103f901d3d9dfb80200000092030a636166652064696e6572"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        85.1497443,
+        25.5876025
+      ]
+    }
+  }
+]
