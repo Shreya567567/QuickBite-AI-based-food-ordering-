@@ -1,223 +1,112 @@
-# 🍔 QuickBite
+# QuickBite
 
-### Discover. Decide. Order. — A Smarter Way to Find Your Next Meal.
+> Discover what you are craving. Decide with confidence. Order without the guesswork.
 
-QuickBite is a **location-aware, AI-assisted food discovery and ordering platform** built to make food selection faster, more personalized, and more convenient.
+QuickBite is a smart, personalized food discovery and ordering platform designed to make choosing what to eat as effortless as ordering it.
 
-Instead of simply showing users a list of restaurants, QuickBite focuses on a more important question:
+Unlike traditional food delivery platforms that focus primarily on restaurant listings, QuickBite brings **personalized food suggestions, preference-based discovery, location-aware restaurant search, and seamless ordering** into one unified experience.
 
-> **"What should I eat right now?"**
+Built with **React and Vite**, QuickBite uses **Firebase** for authentication and application data, while **Geoapify** powers location-aware restaurant discovery and nearby food search.
 
-Users can discover nearby restaurants, explore menus, get personalized food suggestions through the **AI Suggest** experience, manage their cart, place orders, and manage their profiles.
+## Contents
 
-At the same time, QuickBite provides dedicated experiences for **customers, restaurant partners, and administrators**, creating a complete food-tech ecosystem within a single application.
+- [What Makes QuickBite Unique](#what-makes-quickbite-unique)
+- [Features](#features)
+- [How It Works](#how-it-works)
+- [Technology Stack](#technology-stack)
+- [Getting Started](#getting-started)
+- [Environment Variables](#environment-variables)
+- [Application Routes](#application-routes)
+- [Project Structure](#project-structure)
+- [Authentication and Roles](#authentication-and-roles)
+- [Available Scripts](#available-scripts)
+- [Production Build](#production-build)
+- [Troubleshooting](#troubleshooting)
+- [Project Vision](#project-vision)
 
----
+## What Makes QuickBite Unique
 
-## 🚀 Why QuickBite?
+### AI-Powered Food Discovery
 
-Traditional food ordering often requires users to:
+QuickBite helps users answer the familiar question, **"What should I eat?"**, through its **AI Suggest** experience. Suggestions are shaped around the user's mood, cravings, food preferences, budget, and occasion.
 
-1. Search for restaurants
-2. Browse multiple menus
-3. Compare food items
-4. Decide what they are craving
-5. Finally place an order
+### Personalized Recommendations
 
-QuickBite focuses on reducing this decision-making effort.
+Instead of asking users to browse endless restaurant and menu listings, QuickBite lets them describe what they want right now:
 
-### 💡 The Core Idea
+| Preference | Available choices |
+| --- | --- |
+| **Mood** | Need Comfort, Feeling Energetic, Celebrating Something, Just Hungry |
+| **Food preference** | Veg Goodness, Non-Veg Lover |
+| **Experience** | Keep It Healthy, Turn Up the Spice, Satisfy My Sweet Tooth, Surprise Me |
+| **Budget** | Budget Bites, Great Value, Treat Yourself, Money Doesn't Matter |
 
-QuickBite combines:
+This turns food ordering from a basic search task into a personalized food discovery experience.
 
-**📍 Location Awareness**  
-+  
-**🤖 Personalized Food Suggestions**  
-+  
-**🍽️ Restaurant Discovery**  
-+  
-**🛒 Seamless Ordering**  
-+  
-**👥 Role-Based Platform Architecture**
+### Location-Based Restaurant Discovery
 
-into one unified experience.
+QuickBite uses the user's location to surface nearby restaurants and food options, making discovery more relevant to where they are.
 
-> **Less searching. Less decision fatigue. Faster food discovery.**
+### Discover, Decide, Order
 
----
+QuickBite connects the complete food journey:
 
-# ✨ Features
+**Discover restaurants -> Explore menus -> Get personalized suggestions -> Add to cart -> Checkout**
 
-## 👤 Customer Experience
+### A More Personal Customer Experience
 
-### 📍 Nearby Restaurant Discovery
+Customers can manage their profile, cart, preferences, and order history in one place, creating a consistent experience from discovery through ordering.
 
-Discover restaurants based on the user's current location using **Geoapify APIs**.
+## Features
 
-- Location-based restaurant search
-- Nearby restaurant discovery
-- Browser location integration
-- Restaurant and food exploration
+### Customer Features
 
-### 🤖 AI Suggest — Personalized Food Discovery
+- Browse restaurants and food categories without signing in
+- Discover nearby restaurants through location-based search
+- Explore restaurant details and menu items
+- Get personalized food and restaurant recommendations through **AI Suggest**
+- Find food based on mood, cravings, dietary preferences, occasion, and budget
+- Add meals to the cart and complete checkout
+- View previous orders and order history
+- Manage personal profile information
 
-One of QuickBite's core differentiators is the **AI Suggest** experience.
+### Restaurant Partner Features
 
-Instead of forcing users to manually search through multiple restaurants, QuickBite guides them through preference-based questions such as:
+- Register and sign in as a restaurant partner
+- Add and manage restaurant information
+- Manage menu items and item availability
+- View and manage incoming orders
+- Access restaurant profile and settings
 
-- What's your vibe today?
-- Veg or non-veg?
-- Healthy, spicy, sweet, or surprise?
-- What's your spending mood?
-- When do you want your meal?
+### Admin Features
 
-These preferences are used to provide more relevant food and restaurant suggestions.
+- View the administrator dashboard
+- Manage users, restaurants, and food categories
+- Access platform settings
+- Protect administrative workflows with role-based routing
 
-### Example
+## How It Works
 
-> **"I'm hungry, want something spicy, non-veg, and under ₹500."**
-
-Instead of manually exploring multiple restaurants, QuickBite uses these preferences as the starting point for food discovery.
-
----
-
-### 🍽️ Restaurant & Menu Discovery
-
-Users can:
-
-- Browse restaurants
-- Explore restaurant details
-- View menus
-- Explore food categories
-- Check available menu items
-- Select items for ordering
-
----
-
-### 🛒 Cart & Checkout
-
-Customers can:
-
-- Add food items to their cart
-- Modify cart selections
-- Review their order
-- Proceed through checkout
-- Place orders
-
----
-
-### 📦 Order History
-
-Customers can access their previous orders and manage their ordering activity from their account.
-
----
-
-### 👤 Profile Management
-
-Users can manage their personal profile information through a dedicated customer profile experience.
-
----
-
-# 🏪 Restaurant Partner Experience
-
-QuickBite is not only designed for customers.
-
-Restaurant partners receive a dedicated platform experience to manage their business.
-
-### 🏪 Restaurant Management
-
-Partners can:
-
-- Add restaurant information
-- Manage restaurant profiles
-- Update restaurant details
-- Access restaurant settings
-
-### 🍴 Menu Management
-
-Partners can:
-
-- Add menu items
-- Update menu items
-- Manage item availability
-- Maintain their restaurant menu
-
-### 📦 Order Management
-
-Restaurant partners can:
-
-- View incoming orders
-- Manage restaurant orders
-- Access order-related workflows
-
-This creates a complete restaurant-side operational experience within the same application.
-
----
-
-# 🛡️ Administration
-
-QuickBite includes a dedicated administrator experience for managing the overall platform.
-
-Administrators can:
-
-- 📊 Access the admin dashboard
-- 👥 Manage users
-- 🏪 Manage restaurants
-- 🍔 Manage food categories
-- ⚙️ Manage platform settings
-
-Administrative routes are protected using **role-based access control**.
-
----
-
-# 🔐 Role-Based Architecture
-
-QuickBite uses a role-aware architecture to separate experiences between different types of users.
-
-### Supported Roles
-
-| Role | Access |
-|------|--------|
-| 👤 `customer` | Food discovery, AI suggestions, cart, checkout, orders, profile |
-| 🏪 `partner` | Restaurant management, menu management, orders, settings |
-| 🛡️ `admin` | Platform administration, users, restaurants, categories, settings |
-
-After authentication, QuickBite retrieves the user's profile from Firestore and determines the appropriate application experience based on the user's `role`.
-
-### Why this matters
-
-Instead of exposing every page to every user, QuickBite provides:
-
-- Role-specific navigation
-- Role-specific layouts
-- Protected routes
-- Separated workflows
-- Better scalability
-- Better maintainability
-
----
-
-# 🧠 What Makes QuickBite Different?
-
-QuickBite is built around a simple observation:
-
-> **People don't always know what they want to eat — they know how they feel.**
-
-Traditional restaurant search starts with:
-
-```text
-Restaurant → Menu → Food → Decision
+1. **Discover:** Browse food categories, restaurants, and nearby options.
+2. **Describe your craving:** Select preferences such as mood, food type, experience, and budget.
+3. **Decide:** Review suggestions and explore the recommended restaurant or menu.
+4. **Order:** Add items to the cart and complete checkout.
+5. **Track your history:** Review previous orders and manage your profile.
 
 ## Technology Stack
 
 - **Frontend:** React 19
 - **Build tool:** Vite 8
 - **Routing:** React Router DOM 7
-- **Authentication and database:** Firebase Authentication and Cloud Firestore
-- **Location and restaurant discovery:** Geoapify APIs
+- **Authentication:** Firebase Authentication
+- **Application data:** Cloud Firestore
+- **Location and nearby search:** Geoapify APIs
+- **Architecture:** Single-page application (SPA)
 - **Code quality:** ESLint
 
-## Prerequisites
+## Getting Started
+
+### Prerequisites
 
 Install the following before running the project:
 
@@ -226,17 +115,29 @@ Install the following before running the project:
 - A Firebase project with Authentication and Cloud Firestore enabled
 - A Geoapify API key for location and nearby restaurant search
 
-## Getting Started
+### Installation
 
-### 1. Install dependencies
+Clone the repository, move into the project directory, and install dependencies:
 
 ```bash
+git clone <repository-url>
+cd quickbite
 npm install
 ```
 
-### 2. Configure environment variables
+### Configure Firebase and Geoapify
 
-Create a `.env` file in the project root. Vite exposes only variables prefixed with `VITE_` to the browser, so use the following names:
+Create a `.env` file in the project root using the variables below, then start the development server:
+
+```bash
+npm run dev
+```
+
+Vite will print the local URL, usually `http://localhost:5173`.
+
+## Environment Variables
+
+Create `.env` in the project root:
 
 ```env
 VITE_FIREBASE_API_KEY=your_firebase_api_key
@@ -250,25 +151,103 @@ VITE_GEOAPIFY_API_KEY=your_geoapify_api_key
 
 Get the Firebase values from **Firebase Console > Project settings > Your apps**. Get the Geoapify value from the Geoapify dashboard.
 
-Do not commit `.env` files or API keys to source control. Restart the Vite server after changing environment variables.
+> Never commit `.env` files or API keys to source control. Restart the Vite server after changing environment variables because they are read at build time.
 
-### 3. Configure Firebase
-
-In Firebase Console:
+### Firebase Setup
 
 1. Create or select a Firebase project.
 2. Register a web application and copy its configuration values into `.env`.
-3. Enable the sign-in providers used by the application, including email/password and Google authentication when Google sign-in is enabled for the project.
+3. Enable the authentication providers used by the application, including email/password and Google authentication when Google sign-in is enabled for the project.
 4. Create a Cloud Firestore database.
-5. Configure Firestore security rules appropriate for your deployment. The application expects user profiles and operational data to be available to the authenticated roles.
+5. Configure Firestore security rules for the customer, partner, and admin access patterns used by your deployment.
 
-### 4. Start the development server
+## Application Routes
 
-```bash
-npm run dev
+### Public Routes
+
+| Route | Purpose |
+| --- | --- |
+| `/` | Landing page with role-aware redirection |
+| `/home` | Restaurant and food discovery |
+| `/restaurant/:id` | Restaurant details and menu |
+| `/ai-suggest` | Personalized food and restaurant suggestions |
+| `/login` | Customer login |
+| `/signup` | Customer registration |
+| `/partner-login` | Restaurant partner login |
+| `/partner-signup` | Restaurant partner registration |
+
+### Customer Routes
+
+| Route | Purpose |
+| --- | --- |
+| `/cart` | Review selected menu items |
+| `/orders` | View order history |
+| `/checkout` | Complete an order |
+| `/profile` | Manage customer profile |
+
+These routes require the `customer` role.
+
+### Restaurant Partner Routes
+
+| Route | Purpose |
+| --- | --- |
+| `/restaurant/dashboard` | Partner dashboard |
+| `/restaurant/add` | Add a restaurant |
+| `/restaurant/menu/:restaurantId` | Manage a restaurant menu |
+| `/restaurant/panel` | Restaurant operations panel |
+| `/restaurant/orders` | Manage incoming orders |
+| `/restaurant/settings` | Restaurant settings |
+| `/restaurant/profile` | Restaurant partner profile |
+
+These routes require the `partner` role.
+
+### Admin Routes
+
+| Route | Purpose |
+| --- | --- |
+| `/admin/dashboard` | Administration dashboard |
+| `/admin/users` | Manage users |
+| `/admin/restaurants` | Manage restaurants |
+| `/admin/categories` | Manage food categories |
+| `/admin/settings` | Platform settings |
+
+These routes require the `admin` role. Unauthorized users are redirected to `/unauthorized`, and unknown routes are handled by the not-found page.
+
+## Project Structure
+
+```text
+quickbite/
+├── public/                 Static public assets
+├── src/
+│   ├── components/         Reusable UI components and forms
+│   ├── context/            Authentication and cart state providers
+│   ├── data/               Food, restaurant, and cached discovery data
+│   ├── firebase/           Firebase app, Auth, and Firestore setup
+│   ├── hooks/              Shared React hooks
+│   ├── layouts/            Guest, customer, partner, and admin layouts
+│   ├── pages/              Route-level screens grouped by role
+│   ├── routes/             Application routes and role protection
+│   ├── services/            Firebase, Geoapify, restaurant, menu, and user APIs
+│   ├── App.jsx             Root application component
+│   ├── App.css             Application-level styles
+│   └── index.css           Global styles and design tokens
+├── index.html              SPA entry HTML
+├── package.json             Dependencies and npm scripts
+├── vite.config.js           Vite configuration
+└── eslint.config.js         ESLint configuration
 ```
 
-Open the local URL printed by Vite, usually `http://localhost:5173`.
+## Authentication and Roles
+
+Firebase Authentication handles sign-in and registration. After authentication, QuickBite listens to the signed-in user's profile in the Firestore `users` collection and uses the `role` field to determine access.
+
+Supported roles:
+
+- `customer` - Can browse, order, manage a cart, and view order history.
+- `partner` - Can manage restaurants, menus, orders, and partner settings.
+- `admin` - Can manage users, restaurants, categories, and platform settings.
+
+Restaurant records are stored in the `restaurants` Firestore collection. Menu, user, and order operations are organized in the service modules under `src/services`. Keep Firestore security rules aligned with these role boundaries before deploying publicly.
 
 ## Available Scripts
 
@@ -279,94 +258,43 @@ Open the local URL printed by Vite, usually `http://localhost:5173`.
 | `npm run preview` | Preview the production build locally |
 | `npm run lint` | Run ESLint across the project |
 
-## Application Routes
-
-### Public routes
-
-| Route | Purpose |
-| --- | --- |
-| `/` | Landing page with role-aware redirection |
-| `/home` | Restaurant and food discovery |
-| `/restaurant/:id` | Restaurant details and menu |
-| `/ai-suggest` | Food and restaurant suggestions |
-| `/login` | Customer login |
-| `/signup` | Customer registration |
-| `/partner-login` | Restaurant partner login |
-| `/partner-signup` | Restaurant partner registration |
-
-### Customer routes
-
-`/cart`, `/orders`, `/checkout`, and `/profile` require the `customer` role.
-
-### Restaurant partner routes
-
-The partner area includes `/restaurant/dashboard`, `/restaurant/add`, `/restaurant/menu/:restaurantId`, `/restaurant/panel`, `/restaurant/orders`, `/restaurant/settings`, and `/restaurant/profile`. These routes require the `partner` role.
-
-### Admin routes
-
-The admin area includes `/admin/dashboard`, `/admin/users`, `/admin/restaurants`, `/admin/categories`, and `/admin/settings`. These routes require the `admin` role.
-
-Unauthenticated or unauthorized users are redirected through the protected route components, with fallback pages at `/unauthorized` and for unknown routes.
-
-## Project Structure
-
-```text
-src/
-├── components/       Reusable UI components and forms
-├── context/          Authentication and cart state providers
-├── data/             Seed and cached restaurant/food data
-├── firebase/         Firebase app, Auth, and Firestore initialization
-├── hooks/            Shared React hooks
-├── layouts/          Guest, customer, partner, and admin layouts
-├── pages/            Route-level screens grouped by user role
-├── routes/           Application routes and role protection
-├── services/         Firebase, Geoapify, restaurant, menu, and user APIs
-├── App.jsx           Root application component
-├── App.css           Application-level styles
-└── index.css         Global styles and design tokens
-```
-
-## Data and Roles
-
-Authentication is handled by Firebase Authentication. After sign-in, QuickBite listens to the signed-in user's Firestore profile and uses its `role` field to determine access. The supported roles are:
-
-- `customer`
-- `partner`
-- `admin`
-
-Restaurant records are stored in the `restaurants` Firestore collection. User profiles and menu/order data are accessed through the service modules in `src/services`. Keep Firestore rules aligned with these role boundaries before deploying publicly.
-
-## Development Notes
-
-- Public browsing routes can render without a signed-in user, but customer, partner, and admin workflows are protected.
-- Nearby restaurant search requires browser location permission and a valid Geoapify key.
-- Firebase configuration is read at build time through `import.meta.env`.
-- The `src/data/` directory contains local food and restaurant data used by parts of the discovery experience and cached data flows.
-
 ## Production Build
 
-Build and locally preview the application with:
+Build and preview the production bundle locally:
 
 ```bash
 npm run build
 npm run preview
 ```
 
-For deployment, configure the same environment variables in the hosting provider and rewrite application routes to `index.html` so React Router can handle direct navigation to nested routes.
+For deployment:
+
+- Configure the same `VITE_*` environment variables in the hosting provider.
+- Rewrite application routes to `index.html` so React Router can handle direct navigation to nested routes.
+- Configure Firebase Authentication domains and Firestore security rules for the deployed domain.
+- Restrict and monitor Geoapify API usage according to the deployment requirements.
 
 ## Troubleshooting
 
 ### Firebase configuration errors
 
-Verify that all `VITE_FIREBASE_*` values are present, the Firebase web app is registered, and the required authentication provider is enabled. Restart the development server after editing `.env`.
+Check that every `VITE_FIREBASE_*` value is present, the Firebase web app is registered, and the required authentication provider is enabled. Restart the development server after editing `.env`.
 
 ### Nearby restaurants do not load
 
-Check that `VITE_GEOAPIFY_API_KEY` is valid, the browser has location permission, and the Geoapify account allows the requested API calls.
+Check that `VITE_GEOAPIFY_API_KEY` is valid, the browser has location permission, and the Geoapify account permits the requested API calls.
 
 ### A protected page redirects unexpectedly
 
-Confirm that the signed-in user's profile exists in the Firestore `users` collection and that its `role` field is exactly `customer`, `partner`, or `admin` as appropriate.
+Confirm that the signed-in user's profile exists in the Firestore `users` collection and that its `role` field is exactly `customer`, `partner`, or `admin`.
+
+### Direct links return a 404 after deployment
+
+Configure the hosting provider to serve `index.html` for unknown application routes. This is required for client-side routing in a single-page application.
+
+## Project Vision
+
+QuickBite aims to go beyond traditional food ordering by becoming a **personalized food companion** that understands what users want to eat and helps them discover the right food at the right time.
 
 ## License
 
